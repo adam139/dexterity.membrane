@@ -8,6 +8,7 @@ class MemberRoleProvider(grok.Adapter, MembraneUser):
     grok.implements(IMembraneUserRoles)
     def __init__(self, context):
         self.context = context
+        
     def getRolesForPrincipal(self, principal, request=None):
             roles = []
             bonus = self.context.bonus
