@@ -39,8 +39,8 @@
      <element value="plone.app.referenceablebehavior.referenceable.IReferenceable" />
      <element value="dexterity.membrane.behavior.membraneuser.IMembraneUser" />
      <element value="dexterity.membrane.behavior.membraneuser.IProvidePasswords" />
- </property>
-
+     <element value="my315ok.wechat.behaviors.wechat_token.IWechatApiKey" />
+  </property>
   <!-- View information -->
   <property name="default_view">view</property>
   <property name="default_view_fallback">False</property>

@@ -19,10 +19,10 @@ class Sandbox(PloneSandboxLayer):
     def setUpZope(self, app, configurationContext):
         # Load ZCML
         import dexterity.membrane
-        import collective.conference
+#        import collective.conference
  
         xmlconfig.file('configure.zcml', dexterity.membrane, context=configurationContext)
-        xmlconfig.file('configure.zcml', collective.conference, context=configurationContext)        
+#        xmlconfig.file('configure.zcml', collective.conference, context=configurationContext)        
         z2.installProduct(app, 'Products.membrane')
 #        z2.installProduct(app, 'collective.conference')
                       
@@ -33,7 +33,7 @@ class Sandbox(PloneSandboxLayer):
     
     def setUpPloneSite(self, portal):
         applyProfile(portal, 'dexterity.membrane:default') 
-        applyProfile(portal, 'collective.conference:default')                
+#        applyProfile(portal, 'collective.conference:default')                
       
 
 TEST_FIXTURE = Sandbox()

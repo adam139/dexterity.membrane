@@ -48,9 +48,9 @@ class TestView(unittest.TestCase):
                              bonus = 300,
                              description="I am member1")     
      
-        portal.invokeFactory('collective.conference.conference', 'conference1',
-                             title=u'conference1',
-                             participants=['member1'])          
+#        portal.invokeFactory('collective.conference.conference', 'conference1',
+#                             title=u'conference1',
+#                             participants=['member1'])          
  
         data = getFile('image.jpg').read()
         item = portal['memberfolder']['member1']
@@ -66,9 +66,9 @@ class TestView(unittest.TestCase):
         browser = Browser(app)
         browser.handleErrors = False
         browser.addHeader('Authorization', 'Basic %s:%s' % (TEST_USER_NAME, TEST_USER_PASSWORD,))
-        file=portal['conference1']
-        event.notify(RegisteredConfEvent(file))                 
-        event.notify(UnRegisteredConfEvent(file))        
+#        file=portal['conference1']
+#        event.notify(RegisteredConfEvent(file))                 
+#        event.notify(UnRegisteredConfEvent(file))        
         
         import transaction
         transaction.commit()

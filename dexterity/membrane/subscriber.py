@@ -178,7 +178,7 @@ def CreateBonusRecorderEvent(event):
 
     site = getSite()
     pm = getToolByName(site,'portal_membership')
-    userobject=pm.getMemberById(who)
+    userobject = pm.getMemberById(who)
 #    userobject = mp.getAuthenticatedMember()
 #    username = userobject.getUserName()
 #    username = "12@qq.com"    

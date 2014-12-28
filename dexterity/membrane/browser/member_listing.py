@@ -62,14 +62,23 @@ class MemberFolderView(grok.View):
         roles = ','.join(roles)
         return roles
         
-    def getMemberList(self):
-        """获取会员列表"""
-        mlist = []        
+    def getMemberBrains(self):
         catalog = getToolByName(self.context, "portal_catalog")
         memberbrains = catalog(object_provides=IMember.__identifier__, 
                                 path="/".join(self.context.getPhysicalPath()),
                                               sort_order="reverse",
                                               sort_on="created")
+        return memberbrains        
+        
+    def getMemberList(self):
+        """获取会员列表"""
+        mlist = []
+        memberbrains = self.getMemberBrains()        
+#        catalog = getToolByName(self.context, "portal_catalog")
+#        memberbrains = catalog(object_provides=IMember.__identifier__, 
+#                                path="/".join(self.context.getPhysicalPath()),
+#                                              sort_order="reverse",
+#                                              sort_on="created")
                     
 
         for brain in memberbrains:
