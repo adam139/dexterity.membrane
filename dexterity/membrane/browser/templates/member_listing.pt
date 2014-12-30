@@ -71,13 +71,13 @@
 <metal:js fill-slot="javascript_bottom_slot">
 			  <script type="text/javascript">
 
-jq(document).ready(function(){
+$(document).ready(function(){
 //load overlay effect
 // No overlays for IE6
-	if (!jq.browser.msie ||
-	parseInt(jq.browser.version, 10) >= 7) {
+	if (!$.browser.msie ||
+	parseInt($.browser.version, 10) >= 7) {
 		// Set up overlays
-		jq(".link-overlay").prepOverlay({
+		$(".link-overlay").prepOverlay({
 		subtype: 'ajax',
 		filter: '#content>*',
 		formselector: '#content-core > form',
@@ -85,45 +85,45 @@ jq(document).ready(function(){
 		closeselector: '[name=form.buttons.cancel]',
 		});
 	};
-	jq('.iphone-style').live('click', function(){
-		checkboxID = '#' + jq(this).attr('rel');
-		if (jq(checkboxID)[0].checked == false) {
-			var action = jq("#ajaxreq").attr('data-ajax-target');
-			var id = jq(this).siblings('input').attr('id');
+	$('.iphone-style').live('click', function(){
+		checkboxID = '#' + $(this).attr('rel');
+		if ($(checkboxID)[0].checked == false) {
+			var action = $("#ajaxreq").attr('data-ajax-target');
+			var id = $(this).siblings('input').attr('id');
 			var state = {'id': id,state: 'disabled'};			
-			jq(this).animate({backgroundPosition: '0% 100%'});
-			jq(checkboxID)[0].checked = true;
-			jq(this).removeClass('off').addClass('on');
-			jq.post(action, state, function(result){
+			$(this).animate({backgroundPosition: '0% 100%'});
+			$(checkboxID)[0].checked = true;
+			$(this).removeClass('off').addClass('on');
+			$.post(action, state, function(result){
 				if (result) {}
 				else {return false;}
 			}, 'json');
 		}else {
-			var action = jq("#ajaxreq").attr('data-ajax-target');
-			var id = jq(this).siblings('input').attr('id');
+			var action = $("#ajaxreq").attr('data-ajax-target');
+			var id = $(this).siblings('input').attr('id');
 			var state = {'id': id, state: 'enabled'};
-			jq(this).animate({backgroundPosition: '100% 0%'});
-			jq(checkboxID)[0].checked = false;
-			jq(this).removeClass('on').addClass('off');			
-			jq.post(action, state, function(result){
+			$(this).animate({backgroundPosition: '100% 0%'});
+			$(checkboxID)[0].checked = false;
+			$(this).removeClass('on').addClass('off');			
+			$.post(action, state, function(result){
 				if (result) {	}
 			else {return false;}
 			}, 'json');
 		}
 	});
 
-	jq('.iphone-style-checkbox').each(function(){
-		thisID = jq(this).attr('id');
-		thisClass = jq(this).attr('class');
+	$('.iphone-style-checkbox').each(function(){
+		var thisID = $(this).attr('id');
+		var thisClass = $(this).attr('class');
 		switch (thisClass) {
 			case "iphone-style-checkbox":
 				setClass = "iphone-style";
 				break;}
-		jq(this).addClass('hidden');
-		if (jq(this)[0].checked == true) 
-			jq(this).after('<span class="' + setClass + ' on" rel="' + thisID + '">&nbsp;</span>');
+		$(this).addClass('hidden');
+		if ($(this)[0].checked == true) 
+			$(this).after('<span class="' + setClass + ' on" rel="' + thisID + '">&nbsp;</span>');
 		else
-			jq(this).after('<span class="' + setClass + ' off" rel="' + thisID + '">&nbsp;</span>');
+			$(this).after('<span class="' + setClass + ' off" rel="' + thisID + '">&nbsp;</span>');
 	});	
 	})
 </script>	

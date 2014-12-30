@@ -69,6 +69,9 @@ class EditBonus(dexterity.EditForm):
     grok.name('memberajaxedit')
     grok.context(IMember)    
     label = _(u'Edit user bonus')
+    
+
+            
 # avoid autoform functionality
     def updateFields(self):
         pass

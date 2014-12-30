@@ -12,15 +12,12 @@
   <includeDependencies package="." />
   <!-- Grok the package to initialise schema interfaces and content classes -->
   <grok:grok package="." />
-
-
-
   <include package=".behavior" />
   <include package=".content" />
   <include package=".browser" />
   <include package="collective.conference" />  
   <i18n:registerTranslations directory="locales" />  
-    <browser:page
+  <browser:page
         name="dexterity-membrane-macros"
         for="*"
         permission="zope2.View"
@@ -46,7 +43,7 @@
   <adapter name="email" factory=".indexers.member_email" />  
 
   <!-- -*- extra stuff goes here -*- -->
-  <!--
+<!--
     <monkey:patch
      description="patch when create Member area function fire a createMemberArea event"
      class ="plone.app.users.browser.register.BaseRegistrationForm"

@@ -9,6 +9,8 @@
   <grok:grok package="." />
 
   <!-- -*- extra stuff goes here -*- -->
-
+	<browser:resourceDirectory
+  name="dexterity.membrane"
+  directory="static" />
  
 </configure>

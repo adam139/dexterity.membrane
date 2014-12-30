@@ -1,6 +1,8 @@
 <metal:block define-macro="styles">
-   <link rel="stylesheet" tal:attributes="href
-   string:${view/static}/style.css"/>
+   <link rel="stylesheet" 
+   tal:define="navroot context/@@plone_portal_state/navigation_root_url"
+   tal:attributes="href
+   string:${navroot}/++resource++dexterity.membrane/style.css"/>
 </metal:block>
 
 <metal:block define-macro="navbar" i18n:domain="collective.conference">

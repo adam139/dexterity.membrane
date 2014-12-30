@@ -40,6 +40,7 @@
      <element value="dexterity.membrane.behavior.membraneuser.IMembraneUser" />
      <element value="dexterity.membrane.behavior.membraneuser.IProvidePasswords" />
      <element value="my315ok.wechat.behaviors.wechat_token.IWechatApiKey" />
+     <element value="my315ok.wechat.behaviors.qrcode.IQrcode" />
   </property>
   <!-- View information -->
   <property name="default_view">view</property>
