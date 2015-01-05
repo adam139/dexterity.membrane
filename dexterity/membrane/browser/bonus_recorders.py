@@ -47,5 +47,10 @@ class bonusView(grok.View):
             i = i - 1                       
             mlist.append(row)
         mlist.reverse()
-        return mlist         
-    
+        return mlist
+             
+class bonusB3View(bonusView):
+    grok.context(IMember)     
+    grok.template('bonus_b3_recorders')
+    grok.name('bonusb3_recorders')
+    grok.require('zope2.View')    

@@ -74,12 +74,7 @@ class MemberFolderView(grok.View):
         """获取会员列表"""
         mlist = []
         memberbrains = self.getMemberBrains()        
-#        catalog = getToolByName(self.context, "portal_catalog")
-#        memberbrains = catalog(object_provides=IMember.__identifier__, 
-#                                path="/".join(self.context.getPhysicalPath()),
-#                                              sort_order="reverse",
-#                                              sort_on="created")
-                    
+                   
 
         for brain in memberbrains:
            
@@ -97,7 +92,14 @@ class MemberFolderView(grok.View):
             row['editurl'] = row['url'] + '/memberajaxedit'
             row['delurl'] = row['url'] + '/delete_confirmation'            
             mlist.append(row)
-        return mlist         
+        return mlist
+
+class MemberFolderB3View(MemberFolderView):
+    grok.context(IMemberfolder)     
+    grok.template('member_b3_listing')
+    grok.name('adminb3_view')
+    grok.require('cmf.ManagePortal')             
+
 class memberstate(grok.View):
     grok.context(INavigationRoot)
     grok.name('ajaxmemberstate')

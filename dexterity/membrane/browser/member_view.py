@@ -47,6 +47,25 @@ class MembraneMemberView(grok.View):
     def update(self):
         # Hide the editable-object border
         self.request.set('disable_border', True)
+
+    @memoize    
+    def catalog(self):
+        context = aq_inner(self.context)
+        pc = getToolByName(context, "portal_catalog")
+        return pc
+    
+    @memoize    
+    def pm(self):
+        context = aq_inner(self.context)
+        pm = getToolByName(context, "portal_membership")
+        return pm 
+       
+    @memoize    
+    def getHomeFolder(self):
+        member = self.pm().getAuthenticatedMember()
+        member_id = member.getId()
+        member_folder = self.pm().getHomeFolder(member_id)
+        return member_folder
         
     
     def fullname(self):
@@ -65,6 +84,12 @@ class MembraneMemberView(grok.View):
                                                   default="translate")
         return title
     
+class MembraneMemberB3View(MembraneMemberView):
+    grok.context(IMember)     
+    grok.template('member_b3_view')
+    grok.name('b3view')
+    grok.require('zope2.View')
+
 class EditBonus(dexterity.EditForm):
     grok.name('memberajaxedit')
     grok.context(IMember)    
