@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-04-26 09:15+0000\n"
+"POT-Creation-Date: 2015-01-09 09:24+0000\n"
 "PO-Revision-Date: 2011-05-04 03:00+0200\n"
 "Last-Translator: Maurits van Rees <maurits@vanrees.org>\n"
 "Language-Team: plone-nl@lists.plone.org\n"
@@ -15,6 +15,7 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: dexterity.membrane\n"
 
+#: ./browser/templates/member_b3_view.pt:146
 #: ./browser/templates/member_view.pt:139
 msgid "Address"
 msgstr ""
@@ -31,7 +32,8 @@ msgstr ""
 msgid "Aomen"
 msgstr ""
 
-#: ./browser/member_view.py:81
+#: ./browser/member_view.py:110
+#: ./browser/templates/member_b3_view.pt:19
 #: ./browser/templates/member_view.pt:19
 msgid "Base information"
 msgstr ""
@@ -40,6 +42,7 @@ msgstr ""
 msgid "Beijing"
 msgstr ""
 
+#: ./browser/templates/member_b3_view.pt:44
 #: ./browser/templates/member_view.pt:44
 msgid "Biography"
 msgstr "Biografie"
@@ -59,11 +62,13 @@ msgstr ""
 msgid "Chongqing"
 msgstr ""
 
+#: ./browser/templates/member_b3_view.pt:191
 #: ./browser/templates/member_view.pt:184
 #: ./content/member.py:236
 msgid "Comments"
 msgstr ""
 
+#: ./browser/templates/member_b3_view.pt:158
 #: ./browser/templates/member_view.pt:151
 msgid "Conference information"
 msgstr ""
@@ -72,6 +77,7 @@ msgstr ""
 msgid "Confirm Password"
 msgstr "Bevestig wachtwoord"
 
+#: ./browser/templates/member_b3_view.pt:136
 #: ./browser/templates/member_view.pt:129
 #: ./content/member.py:179
 msgid "Country"
@@ -89,7 +95,7 @@ msgstr ""
 msgid "Disabled"
 msgstr ""
 
-#: ./browser/member_view.py:70
+#: ./browser/member_view.py:96
 msgid "Edit user bonus"
 msgstr ""
 
@@ -97,6 +103,7 @@ msgstr ""
 msgid "Education"
 msgstr ""
 
+#: ./browser/templates/member_b3_view.pt:28
 #: ./browser/templates/member_view.pt:28
 msgid "Email"
 msgstr ""
@@ -109,6 +116,7 @@ msgstr ""
 msgid "Enable this member"
 msgstr ""
 
+#: ./browser/templates/member_b3_view.pt:39
 #: ./browser/templates/member_view.pt:39
 #: ./content/member.py:135
 msgid "External Homepage"
@@ -134,7 +142,8 @@ msgstr ""
 msgid "Gansu"
 msgstr ""
 
-#: ./browser/member_view.py:125
+#: ./browser/member_view.py:154
+#: ./browser/templates/member_b3_view.pt:128
 #: ./browser/templates/member_view.pt:121
 msgid "Geography information"
 msgstr ""
@@ -207,6 +216,7 @@ msgstr ""
 msgid "Member"
 msgstr "Lid"
 
+#: ./browser/templates/member_b3_listing.pt:21
 #: ./browser/templates/member_listing.pt:21
 msgid "Member information"
 msgstr ""
@@ -215,10 +225,12 @@ msgstr ""
 msgid "Membership"
 msgstr "Lidmaatschap"
 
+#: ./browser/templates/bonus_b3_recorders.pt:19
 #: ./browser/templates/bonus_recorders.pt:19
 msgid "My bonus recorders(current bonus is:${bonus})"
 msgstr ""
 
+#: ./browser/templates/member_b3_view.pt:166
 #: ./browser/templates/member_view.pt:159
 #: ./content/member.py:227
 msgid "Need funding"
@@ -228,7 +240,8 @@ msgstr ""
 msgid "Neimenggu"
 msgstr ""
 
-#: ./browser/member_view.py:103
+#: ./browser/member_view.py:132
+#: ./browser/templates/member_b3_view.pt:98
 #: ./browser/templates/member_view.pt:91
 msgid "Network information"
 msgstr ""
@@ -245,10 +258,12 @@ msgstr "Geen geldige link"
 msgid "Not an email address"
 msgstr "Geen e-mailadres"
 
+#: ./browser/templates/bonus_b3_recorders.pt:25
 #: ./browser/templates/bonus_recorders.pt:25
 msgid "Number"
 msgstr ""
 
+#: ./browser/templates/member_b3_view.pt:73
 #: ./browser/templates/member_view.pt:66
 #: ./content/member.py:151
 msgid "Organization / Company"
@@ -258,11 +273,13 @@ msgstr ""
 msgid "Password"
 msgstr "Wachtwoord"
 
+#: ./browser/templates/member_b3_view.pt:186
 #: ./browser/templates/member_view.pt:179
 #: ./content/member.py:255
 msgid "Person Color Tag"
 msgstr ""
 
+#: ./browser/templates/member_b3_view.pt:111
 #: ./browser/templates/member_view.pt:104
 #: ./content/member.py:141
 msgid "Phone number"
@@ -280,11 +297,13 @@ msgstr ""
 msgid "Please upload image smaller than 512KB"
 msgstr ""
 
+#: ./browser/templates/member_b3_view.pt:78
 #: ./browser/templates/member_view.pt:71
 #: ./content/member.py:162
 msgid "Position / Role in Organization"
 msgstr ""
 
+#: ./browser/templates/member_b3_view.pt:116
 #: ./browser/templates/member_view.pt:109
 #: ./content/member.py:209
 msgid "QQ Number"
@@ -298,6 +317,7 @@ msgstr ""
 msgid "Register for site member"
 msgstr ""
 
+#: ./browser/templates/member_b3_view.pt:171
 #: ./browser/templates/member_view.pt:164
 #: ./content/member.py:231
 msgid "Roomshare"
@@ -335,6 +355,7 @@ msgstr ""
 msgid "Sichuan"
 msgstr ""
 
+#: ./browser/templates/member_b3_view.pt:176
 #: ./browser/templates/member_view.pt:169
 #: ./content/member.py:247
 msgid "T-shirt size"
@@ -360,7 +381,7 @@ msgstr "Het wachtwoord en de bevestigen komen niet overeen."
 msgid "Tianjin"
 msgstr ""
 
-#: ./browser/member_view.py:92
+#: ./browser/member_view.py:121
 msgid "Update password"
 msgstr ""
 
@@ -372,6 +393,7 @@ msgstr ""
 msgid "Use object UUID for the userid?"
 msgstr ""
 
+#: ./browser/templates/member_b3_view.pt:181
 #: ./browser/templates/member_view.pt:174
 #: ./content/member.py:242
 msgid "Vegetarian?"
@@ -381,7 +403,8 @@ msgstr ""
 msgid "Where you are from"
 msgstr ""
 
-#: ./browser/member_view.py:114
+#: ./browser/member_view.py:143
+#: ./browser/templates/member_b3_view.pt:65
 #: ./browser/templates/member_view.pt:58
 msgid "Work information"
 msgstr ""
@@ -406,20 +429,27 @@ msgstr ""
 msgid "Zhejiang"
 msgstr ""
 
+#: ./browser/templates/member_b3_view.pt:32
 #: ./browser/templates/member_view.pt:32
 #: ./content/member.py:200
 msgid "bonus"
 msgstr ""
 
+#: ./browser/templates/member_b3_view.pt:34
 #: ./browser/templates/member_view.pt:34
 msgid "bonus recorders"
 msgstr ""
 
+#: ./browser/templates/member_b3_view.pt:52
 #: ./browser/templates/member_view.pt:52
 msgid "change password"
 msgstr ""
 
-#: ./browser/member_view.py:137
+#: ./browser/templates/member_b3_view.pt:54
+msgid "change wechat"
+msgstr ""
+
+#: ./browser/member_view.py:166
 msgid "conference information"
 msgstr ""
 
@@ -432,10 +462,12 @@ msgstr ""
 msgid "create_membrane_account_succesful"
 msgstr ""
 
+#: ./browser/templates/bonus_b3_recorders.pt:26
 #: ./browser/templates/bonus_recorders.pt:26
 msgid "description"
 msgstr ""
 
+#: ./browser/templates/member_b3_listing.pt:29
 #: ./browser/templates/member_listing.pt:29
 msgid "email"
 msgstr ""
@@ -468,10 +500,12 @@ msgstr ""
 msgid "memberfolder for site member"
 msgstr ""
 
+#: ./browser/templates/member_b3_listing.pt:27
 #: ./browser/templates/member_listing.pt:27
 msgid "name"
 msgstr ""
 
+#: ./browser/templates/member_b3_listing.pt:32
 #: ./browser/templates/member_listing.pt:32
 msgid "operations"
 msgstr ""
@@ -484,19 +518,23 @@ msgstr ""
 msgid "privacy"
 msgstr ""
 
+#: ./browser/templates/member_b3_listing.pt:30
 #: ./browser/templates/member_listing.pt:30
 msgid "register date"
 msgstr ""
 
+#: ./browser/templates/member_b3_view.pt:87
 #: ./browser/templates/member_view.pt:80
 #: ./content/member.py:168
 msgid "research domain"
 msgstr ""
 
+#: ./browser/templates/member_b3_listing.pt:28
 #: ./browser/templates/member_listing.pt:28
 msgid "roles"
 msgstr ""
 
+#: ./browser/templates/member_b3_listing.pt:31
 #: ./browser/templates/member_listing.pt:31
 msgid "status"
 msgstr ""
@@ -515,6 +553,7 @@ msgstr ""
 msgid "telecommunication"
 msgstr ""
 
+#: ./browser/templates/member_b3_view.pt:141
 #: ./browser/templates/member_view.pt:134
 #: ./content/member.py:187
 msgid "the province of your company"
@@ -524,6 +563,15 @@ msgstr ""
 msgid "user's bonus,user permission was controlled by this"
 msgstr ""
 
+#: ./browser/templates/member_b3_view.pt:56
+msgid "wechat menu"
+msgstr ""
+
+#: ./browser/templates/member_b3_view.pt:58
+msgid "wechat setting"
+msgstr ""
+
+#: ./browser/templates/member_b3_view.pt:82
 #: ./browser/templates/member_view.pt:75
 msgid "your job belong to sector"
 msgstr ""
