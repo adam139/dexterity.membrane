@@ -1,25 +1,18 @@
-import logging
-
-from AccessControl.AuthEncoding import pw_encrypt
-from AccessControl.AuthEncoding import pw_validate
+# -*- coding: utf-8 -*-
 from Products.CMFCore.utils import getToolByName
 from Products.PlonePAS.sheet import MutablePropertySheet
-from Products.membrane.interfaces import IMembraneUserAuth
-from Products.membrane.interfaces import IMembraneUserChanger
 from Products.membrane.interfaces import IMembraneUserObject
 from Products.membrane.interfaces import IMembraneUserProperties
-from five import grok
+from borg.localrole.interfaces import ILocalRoleProvider
+from dexterity.membrane.behavior import settings
 from plone.app.content.interfaces import INameFromTitle
-from plone.directives import form
+from plone.registry.interfaces import IRegistry
 from plone.uuid.interfaces import IUUID
-from z3c.form.interfaces import IAddForm,IEditForm
-from zope import schema
-from zope.component import adapts
+from zope.component import adapter
 from zope.component import getUtility
-from zope.interface import alsoProvides, implements
-from zope.interface import Interface, invariant, Invalid
-
-from dexterity.membrane import _
+from zope.interface import Interface
+from zope.interface import implementer
+import logging
 
 logger = logging.getLogger(__name__)
 
@@ -27,49 +20,14 @@ logger = logging.getLogger(__name__)
 class IMembraneUser(Interface):
     """Marker/Form interface for Membrane User
 
+    XXX: Bad Name, since its used for something different in Products.Membrane
+
     The main content schema of the membrane user must contain fields named
     'first_name', 'last_name', and 'email'.
 
     The content item must also be adaptable to IProvidePasswords.
     """
 
-
-def get_full_name(context):
-    if context.title != "":return context.title
-    return u""
-#    try:
-#        portal_state = context.unrestrictedTraverse("@@plone_portal_state")
-##        import pdb
-##        pdb.set_trace()
-#        lang = portal_state.language() or portal_state.default_language() 
-#        if lang == 'en':            
-#                names = [
-#                         context.first_name,
-#                         context.last_name,
-#                         ]
-#                return u' '.join([name for name in names if name])
-#        else:
-#                names = [
-#                         context.last_name,                         
-#                         context.first_name,
-#                         ]            
-#                return u''.join([name for name in names if name])              
-#            
-#    except:
-#        names = [
-#                    context.last_name,                         
-#                    context.first_name,
-#                    ]            
-#        return u''.join([name for name in names if name])              
-#    names = [
-#        context.first_name,
-#        context.last_name,
-#        ]
-#    return u' '.join([name for name in names if name])
-
-#def get_full_name(context):
-#
-#    return context.fullname
 
 class INameFromFullName(INameFromTitle):
     """Get the name from the full name.
@@ -83,40 +41,34 @@ class INameFromFullName(INameFromTitle):
     """
 
 
+class IMembraneUserWorkflow(Interface):
+    """Adapts a membrane user to provide workflow-related info."""
+
+    def in_right_state(self):
+        """Returns true if the user is in a state considered active."""
+
+
+@implementer(INameFromFullName)
+@adapter(IMembraneUser)
 class NameFromFullName(object):
-    implements(INameFromFullName)
-    adapts(IMembraneUser)
 
     def __init__(self, context):
         self.context = context
 
     @property
     def title(self):
-        return get_full_name(self.context)
+        return IMembraneUserObject(self.context).get_full_name()
 
 
-class IMembraneUserWorkflow(Interface):
-    """Adapts a membrane user to provide workflow-related info."""
-
-    def is_right_state(self):
-        """Returns true if the user is in a state considered active."""
-
-
-class MembraneUser(object):
-    """Methods for Membrane User
+class DxUserObject(object):
+    """Base Behavioral Methods for Membrane User
     """
-# pending status can login
-    allowed_states = ('enabled')
+
     _default = {'use_email_as_username': True,
                 'use_uuid_as_userid': True}
 
     def __init__(self, context):
         self.context = context
-
-    def in_right_state(self):
-        workflow = getToolByName(self.context, 'portal_workflow')
-        state = workflow.getInfoFor(self.context, 'review_state')
-        return state in self.allowed_states
 
     def getUserId(self):
         if self._use_uuid_as_userid():
@@ -127,6 +79,13 @@ class MembraneUser(object):
         if self._use_email_as_username():
             return self.context.email
         return self.context.username
+
+    def get_full_name(self):
+        names = [
+            self.context.first_name,
+            self.context.last_name,
+            ]
+        return u' '.join([name for name in names if name])
 
     def _use_email_as_username(self):
         return self._reg_setting('use_email_as_username')
@@ -142,138 +101,37 @@ class MembraneUser(object):
         return self._default(setting)
 
 
-class MembraneUserAdapter(grok.Adapter, MembraneUser):
-    grok.context(IMembraneUser)
-    grok.implements(IMembraneUserObject)
+@implementer(IMembraneUserObject)
+@adapter(IMembraneUser)
+class MembraneUserObject(DxUserObject):
+    pass
 
 
-class MembraneUserWorkflow(grok.Adapter, MembraneUser):
-    grok.context(IMembraneUser)
-    grok.implements(IMembraneUserWorkflow)
+@implementer(IMembraneUserWorkflow)
+@adapter(IMembraneUser)
+class MembraneUserWorkflow(DxUserObject):
+
+    allowed_states = ('enabled',)
+
+    def in_right_state(self):
+        workflow = getToolByName(self.context, 'portal_workflow')
+        state = workflow.getInfoFor(self.context, 'review_state')
+        return state in self.allowed_states
 
 
-class MyUserAuthentication(grok.Adapter):
-    grok.context(IMembraneUser)
-    grok.implements(IMembraneUserAuth)
-
-    def verifyCredentials(self, credentials):
-        """Returns True is password is authenticated, False if not.
-        """
-        user = IMembraneUserObject(self.context)
-        if credentials.get('login') != user.getUserName():
-            # Should never happen, as the code should then never end
-            # up here, but better safe than sorry.
-            return False
-        password_provider = IProvidePasswords(self.context)
-        if not password_provider:
-            return False
-        return pw_validate(password_provider.password,
-                           credentials.get('password', ''))
-
-    def authenticateCredentials(self, credentials):
-        # Should not authenticate when the user is not enabled.
-        workflow_info = IMembraneUserWorkflow(self.context)
-        if not workflow_info.in_right_state():
-            return
-        if self.verifyCredentials(credentials):
-            # return (self.getUserId(), self.getUserName())
-            user = IMembraneUserObject(self.context)
-            return (user.getUserId(), user.getUserName())
-
-
-class IProvidePasswords(form.Schema):
-    """Add password fields"""
-
-    # Putting this in a separate fieldset for the moment:
-    form.fieldset('membership', label=_(u"Membership"),
-                  fields=['password', 'confirm_password'])
-
-    # Note that the passwords fields are not required; this means we
-    # can add members without having to add passwords at that time.
-    # The password reset tool should hopefully be able to deal with
-    # that.
-    password = schema.Password(
-        title=_(u"Password"),
-        required=False,
-    )
-
-    confirm_password = schema.Password(
-        title=_(u"Confirm Password"),
-        required=False,
-    )
-
-    @invariant
-    def password_matches_confirmation(data):
-        """password field must match confirm_password field.
-        """
-        password = getattr(data, 'password', None)
-        confirm_password = getattr(data, 'confirm_password', None)
-        if (password or confirm_password) and (password != confirm_password):
-            raise Invalid(_(u"The password and confirmation do not match."))
-
-    form.omitted('password', 'confirm_password')
-    form.no_omit(IAddForm, 'password', 'confirm_password')
-    form.no_omit(IEditForm, 'password', 'confirm_password')    
-
-
-alsoProvides(IProvidePasswords, form.IFormFieldProvider)
-
-
-class PasswordProvider(object):
-
-    def __init__(self, context):
-        self.context = context
-
-    def _get_password(self):
-        return getattr(self.context, 'password', None)
-
-    def _set_password(self, password):
-        # When editing, the password field is empty in the browser; do
-        # not do anything then.
-        if password is not None:
-            self.context.password = pw_encrypt(password)
-
-    def _get_confirm_password(self):
-        # Just return the original password.
-        return self._get_password()
-
-    def _set_confirm_password(self, confirm_password):
-        # No need to store this.
-        return
-
-    password = property(_get_password, _set_password)
-    confirm_password = property(_get_confirm_password, _set_confirm_password)
-
-
-class PasswordProviderAdapter(grok.Adapter, PasswordProvider):
-    grok.context(IMembraneUser)
-    grok.implements(IProvidePasswords)
-
-
-class MyUserPasswordChanger(grok.Adapter, MembraneUser):
-    """Supports resetting a member's password via the password reset form."""
-    grok.context(IMembraneUser)
-    grok.implements(IMembraneUserChanger)
-
-    def doChangeUser(self, user_id, password, **kwargs):
-        password_provider = IProvidePasswords(self.context)
-        password_provider.password = password
-
-
-class MyUserProperties(grok.Adapter, MembraneUser):
+@implementer(IMembraneUserProperties)
+@adapter(IMembraneUser)
+class MembraneUserProperties(DxUserObject):
     """User properties for this membrane context.
 
     Adapted from Products/membrane/at/properties.py
     """
 
-    grok.context(IMembraneUser)
-    grok.implements(IMembraneUserProperties)
-
     # Map from memberdata property to member field:
     property_map = dict(
         email='email',
         home_page='homepage',
-        description='description',
+        description='bio',
         )
 
     @property
@@ -281,7 +139,7 @@ class MyUserProperties(grok.Adapter, MembraneUser):
         # Note: we only define a getter; a setter would be too tricky
         # due to the multiple fields that are behind this one
         # property.
-        return get_full_name(self.context)
+        return IMembraneUserObject(self.context).get_full_name()
 
     def getPropertiesForUser(self, user, request=None):
         """Get properties for this user.
@@ -304,8 +162,7 @@ class MyUserProperties(grok.Adapter, MembraneUser):
                 # ValueError: Property home_page: unknown type
                 value = u''
             properties[prop_name] = value
-        return MutablePropertySheet(self.context.getId(),
-                                    **properties)
+        return MutablePropertySheet(self.context.getId(), **properties)
 
     def setPropertiesForUser(self, user, propertysheet):
         """
@@ -336,16 +193,11 @@ class MyUserProperties(grok.Adapter, MembraneUser):
         pass
 
 
-from borg.localrole.interfaces import ILocalRoleProvider
-from plone.registry.interfaces import IRegistry
-from dexterity.membrane.behavior import settings
-
-
+@implementer(ILocalRoleProvider)
+@adapter(IMembraneUser)
 class MembraneRoleProvider(object):
     # Give a membrane user some extra local roles in his/her own member
     # object.
-    implements(ILocalRoleProvider)
-    adapts(IMembraneUser)
 
     _default_roles = ('Reader', 'Editor', 'Creator')
 

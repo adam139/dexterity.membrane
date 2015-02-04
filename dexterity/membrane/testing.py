@@ -1,41 +1,52 @@
-#import os
-#import tempfile
-#
+# -*- coding: utf-8 -*-
+from plone.app.testing import FunctionalTesting
+from plone.app.testing import IntegrationTesting
+from plone.app.testing import PLONE_FIXTURE
 from plone.app.testing import PloneSandboxLayer
 from plone.app.testing import applyProfile
-from plone.app.testing import PLONE_FIXTURE
-from plone.app.testing import IntegrationTesting
-from plone.app.testing import FunctionalTesting
-
+from plone.testing import z2
 from zope.configuration import xmlconfig
 
-from plone.testing import z2
+EXAMPLE_PROFILE = 'dexterity.membrane.content:example'
 
-class Sandbox(PloneSandboxLayer):
+CONTRIBUTOR_NAME = 'contributor'
+REVIEWER_NAME = 'reviewer'
+
+
+class DexterityMembrane(PloneSandboxLayer):
 
     defaultBases = (PLONE_FIXTURE,)
-    PACKAGE = "dexterity.membrane"
-    
+
     def setUpZope(self, app, configurationContext):
-        # Load ZCML
         import dexterity.membrane
-#        import collective.conference
- 
-        xmlconfig.file('configure.zcml', dexterity.membrane, context=configurationContext)
-#        xmlconfig.file('configure.zcml', collective.conference, context=configurationContext)        
+        import xtshzz.policy
+        xmlconfig.file(
+            'configure.zcml',
+            dexterity.membrane,
+            context=configurationContext
+        )
+        xmlconfig.file(
+            'configure.zcml',
+            xtshzz.policy,
+            context=configurationContext
+        )        
         z2.installProduct(app, 'Products.membrane')
-#        z2.installProduct(app, 'collective.conference')
-                      
-    def tearDownZope(self, app):
-        z2.uninstallProduct(app, 'Products.membrane') 
-#        z2.uninstallProduct(app, 'collective.conference')                
+        z2.installProduct(app, 'collective.indexing')
 
-    
     def setUpPloneSite(self, portal):
-        applyProfile(portal, 'dexterity.membrane:default') 
-#        applyProfile(portal, 'collective.conference:default')                
-      
+        applyProfile(portal, EXAMPLE_PROFILE)
+        portal.portal_workflow.setDefaultChain('one_state_workflow')
 
-TEST_FIXTURE = Sandbox()
-INTEGRATION_TESTING = IntegrationTesting(bases=(TEST_FIXTURE,), name="Sandbox:Integration")
-FUNCTIONAL_TESTING = FunctionalTesting(bases=(TEST_FIXTURE,), name="Sandbox:Functional")
+    def tearDownZope(self, app):
+        z2.uninstallProduct(app, 'Products.membrane')
+
+
+DEXTERITY_MEMBRANE_FIXTURE = DexterityMembrane()
+DEXTERITY_MEMBRANE_INTEGRATION_TESTING = IntegrationTesting(
+    bases=(DEXTERITY_MEMBRANE_FIXTURE,),
+    name="DexterityMembrane:Integration"
+)
+DEXTERITY_MEMBRANE_FUNCTIONAL_TESTING = FunctionalTesting(
+    bases=(DEXTERITY_MEMBRANE_FIXTURE,),
+    name="DexterityMembrane:Functional"
+)

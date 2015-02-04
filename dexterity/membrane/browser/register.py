@@ -59,13 +59,13 @@ defaultvalue2 = u"""
 """
 class IRegistrationForm(IMember):
 
-    publishinfo = schema.Bool(
-        title=_(u"Show me in attendee list"),
-        description=_(u"Check this if you wish your name and contact info \
-        to be published in our attendee listing"),
-        default = True,                              
-        required=False
-    )
+#    publishinfo = schema.Bool(
+#        title=_(u"Show me in attendee list"),
+#        description=_(u"Check this if you wish your name and contact info \
+#        to be published in our attendee listing"),
+#        default = True,                              
+#        required=False
+#    )
 
     privacy = RichText(
             title=_(u"privacy"),
@@ -80,13 +80,9 @@ class IRegistrationForm(IMember):
     captcha = schema.TextLine(title=u"",
                             required=True)
 
-    form.omitted('color','publishinfo','description','homepage','research_domain',
-                 'country','address','qq_number','photo','need_sponsorship',
-                 'roomshare','is_vegetarian','comment','tshirt_size','bonus')
+    form.omitted('bio','homepage',)
 
-    form.no_omit(IEditForm, 'color','publishinfo','description','homepage','research_domain',
-                 'country','address','qq_number','photo','need_sponsorship',
-                 'roomshare','is_vegetarian','comment','tshirt_size','bonus')
+    form.no_omit(IEditForm, 'bio','homepage')
   
 
 @form.validator(field=IRegistrationForm['captcha'])

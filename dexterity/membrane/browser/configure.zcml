@@ -12,5 +12,9 @@
 	<browser:resourceDirectory
   name="dexterity.membrane"
   directory="static" />
- 
+ <browser:page
+	name="dexterity-membrane-macros"
+	for="*"
+	permission="zope2.View"
+	class=".macros.Macros"/>  
 </configure>

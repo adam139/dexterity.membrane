@@ -11,7 +11,7 @@ from zope.interface import Interface
  
 from plone.memoize.instance import memoize
 
-from dexterity.membrane.behavior.membraneuser import IProvidePasswords 
+from dexterity.membrane.behavior.membranepassword import IProvidePasswords 
 from plone.app.layout.navigation.interfaces import INavigationRoot
 from dexterity.membrane import _
 from plone.directives import dexterity

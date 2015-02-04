@@ -1,18 +1,13 @@
-import re
-from five import grok
-from plone.directives import dexterity, form
-from zope import schema
-from zope.interface import Invalid, invariant
-
-from z3c.form import group, field
-
+# -*- coding: utf-8 -*-
 from dexterity.membrane import _
 from dexterity.membrane.membrane_helpers import validate_unique_email
-
-from plone.namedfile.interfaces import IImageScaleTraversable
-from plone.namedfile.field import NamedImage, NamedFile
-from plone.namedfile.field import NamedBlobImage, NamedBlobFile
-
+from plone.directives import form
+from plone.directives import dexterity
+from zope import schema
+from zope.interface import implementer
+from zope.interface import Invalid, invariant
+import re
+from plone.namedfile.field import NamedBlobImage
 
 def is_email(value):
     """Is this an email address?
@@ -92,12 +87,12 @@ class IEmail(form.Schema):
 
     email = schema.TextLine(
         # String with validation in place looking for @, required.
-        # Note that a person's email address will be their username.                            
-        title=_(u"Email address"),
-        description=_(u"Please input correct mail address,the active code will be sent to it"),        
+        # Note that a person's email address will be their username.
+        title=_(u"E-mail Address"),
         required=True,
-        constraint=is_email,        
-    ) 
+        constraint=is_email,
+        )
+
     @invariant
     def email_unique(data):
         """The email must be unique, as it is the login name (user name).
@@ -115,9 +110,68 @@ class IEmail(form.Schema):
             raise Invalid(error)
 
 
-class IMember(IEmail,IImageScaleTraversable):
+class IMember(IEmail):
     """
     Member
+    """
+
+    first_name = schema.TextLine(
+        title=_(u"First Name"),
+        required=True,
+        )
+
+    last_name = schema.TextLine(
+        title=_(u"Last Name"),
+        required=True,
+        )
+
+    homepage = schema.TextLine(
+        # url format
+        title=_(u"External Homepage"),
+        required=False,
+        constraint=is_url,
+        )
+
+    form.widget(bio="plone.app.z3cform.wysiwyg.WysiwygFieldWidget")
+    bio = schema.Text(
+        title=_(u"Biography"),
+        required=False,
+        )
+### organization member
+class IOrganizationMember(IMember):
+    """
+    Organization Member
+    """
+    
+    title = schema.TextLine(title=_(u"Full name"),
+            required=True)
+
+
+    description = schema.Text(
+        title=_(u"Short Bio"),
+        description=_(u"Tell us more about yourself"),
+        required=False,
+    )
+
+### organization sponsor member
+class ISponsorMember(IMember):
+    """
+    Organization Member
+    """
+    
+    title = schema.TextLine(title=_(u"Full name"),
+            required=True)
+
+
+    description = schema.Text(
+        title=_(u"Short Bio"),
+        description=_(u"Tell us more about yourself"),
+        required=False,
+    )    
+### wechat member    
+class IWechatMember(IMember):
+    """
+    Wechat Member
     """
     
     title = schema.TextLine(title=_(u"Full name"),
@@ -130,12 +184,23 @@ class IMember(IEmail,IImageScaleTraversable):
         required=False,
     )
     
-    homepage = schema.TextLine(
-        # url format
-        title=_(u"External Homepage"),
+### conference member
+class IConferenceMember(IMember):
+    """
+    Conference Member
+    """
+    
+    title = schema.TextLine(title=_(u"Full name"),
+            required=True)
+
+
+    description = schema.Text(
+        title=_(u"Short Bio"),
+        description=_(u"Tell us more about yourself"),
         required=False,
-        constraint=is_url,
-        )   
+    )
+    
+  
     
     phone = schema.TextLine(
         title=_(u"Phone number"),
@@ -261,21 +326,12 @@ class IMember(IEmail,IImageScaleTraversable):
     form.omitted('bonus')   
 
 
-@form.validator(field=IMember['photo'])
+@form.validator(field=IConferenceMember['photo'])
 def maxPhotoSize(value):
     if value is not None:
         if value.getSize()/1024 > 512:
             raise schema.ValidationError(_(u"Please upload image smaller than 512KB"))
 
+@implementer(IMember)
 class member(dexterity.Item):
-    grok.implements(IMember)
-    grok.provides(IMember)
-
-
-#
-#@form.validator(field=IParticipant['email'])
-#def emailValidator(value):
-#    try:
-#        return checkEmailAddress(value)
-#    except:
-#        raise Invalid(_(u"Invalid email address"))
+    pass     
