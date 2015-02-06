@@ -77,6 +77,8 @@ class MemberFolderView(grok.View):
                    
 
         for brain in memberbrains:
+            import pdb
+            pdb.set_trace()
            
             row = {'id':'', 'name':'', 'url':'','roles':'',
                     'email':'', 'register_date':'', 'status':'', 'editurl':'',

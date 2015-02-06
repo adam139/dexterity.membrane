@@ -8,7 +8,7 @@ from dexterity.membrane import _
 from dexterity.membrane.behavior.membraneuser import IMembraneUser
 from dexterity.membrane.behavior.membraneuser import IMembraneUserWorkflow
 from plone.directives import form
-from z3c.form.interfaces import IAddForm
+from z3c.form.interfaces import IAddForm,IEditForm
 from zope import schema
 from zope.component import adapter
 from zope.component import queryUtility
@@ -75,6 +75,7 @@ class IProvidePasswords(IProvidePasswordsSchema):
                   fields=['password', 'confirm_password'])
 
     form.omitted('password', 'confirm_password')
+    form.no_omit(IEditForm, 'password', 'confirm_password')
     form.no_omit(IAddForm, 'password', 'confirm_password')
 
 

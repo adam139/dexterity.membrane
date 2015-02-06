@@ -27,9 +27,9 @@ class TestView(unittest.TestCase):
 #        pdb.set_trace()
         start = datetime.datetime.today()
         end = start + datetime.timedelta(7)
-        portal.invokeFactory('dexterity.membrane.memberfolder', 'memberfolder')
+        portal.invokeFactory('dexterity.membrane.memberfolder', 'memberfolder1')
         
-        portal['memberfolder'].invokeFactory('dexterity.membrane.member', 'member1',
+        portal['memberfolder1'].invokeFactory('dexterity.membrane.member', 'member12',
                              email="12@qq.com",
                              last_name=u"唐",
                              first_name=u"岳军",
@@ -39,7 +39,7 @@ class TestView(unittest.TestCase):
                              homepae = 'http://315ok.org/',
                              bonus = 10,
                              description="I am member1")     
-        portal['memberfolder'].invokeFactory('dexterity.membrane.member', 'member2',
+        portal['memberfolder1'].invokeFactory('dexterity.membrane.member', 'member2',
                              email="13@qq.com",
                              last_name=u"唐",
                              first_name=u"岳军",
@@ -53,7 +53,7 @@ class TestView(unittest.TestCase):
           
  
         data = getFile('image.jpg').read()
-        item = portal['memberfolder']['member1']
+        item = portal['memberfolder1']['member12']
         item.photo = NamedImage(data, 'image/jpg', u'image.jpg')
            
         self.portal = portal
@@ -64,7 +64,7 @@ class TestView(unittest.TestCase):
         wf = getToolByName(portal, 'portal_workflow')
 
         wt = wf.dexterity_membrane_workflow
-        dummy = portal['memberfolder']['member1']
+        dummy = portal['memberfolder1']['member12']
         wf.notifyCreated(dummy)
 
         chain = wf.getChainFor(dummy)

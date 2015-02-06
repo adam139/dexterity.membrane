@@ -9,6 +9,9 @@ from zope.interface import Invalid, invariant
 import re
 from plone.namedfile.field import NamedBlobImage
 
+from my315ok.socialorgnization.registrysource import RegistrySource, DynamicVocabulary
+from my315ok.socialorgnization.content.orgnization import IOrgnization
+
 def is_email(value):
     """Is this an email address?
 
@@ -152,7 +155,10 @@ class IOrganizationMember(IMember):
         description=_(u"Tell us more about yourself"),
         required=False,
     )
-
+    orgname = schema.Choice(
+            title=_(u"organization name"),
+            source=DynamicVocabulary("my315ok.socialorgnization.content.orgnization", "IOrgnization")
+                        )  
 ### organization sponsor member
 class ISponsorMember(IMember):
     """

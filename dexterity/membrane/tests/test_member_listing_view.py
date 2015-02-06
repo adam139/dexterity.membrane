@@ -25,9 +25,9 @@ class TestView(unittest.TestCase):
 #        pdb.set_trace()
         start = datetime.datetime.today()
         end = start + datetime.timedelta(7)
-        portal.invokeFactory('dexterity.membrane.memberfolder', 'memberfolder')
+        portal.invokeFactory('dexterity.membrane.memberfolder', 'memberfolder1')
         
-        portal['memberfolder'].invokeFactory('dexterity.membrane.member', 'member1',
+        portal['memberfolder1'].invokeFactory('dexterity.membrane.member', 'member1',
                              email="12@qq.com",
                              last_name=u"唐",
                              first_name=u"岳军",
@@ -37,7 +37,7 @@ class TestView(unittest.TestCase):
                              homepae = 'http://315ok.org/',
                              bonus = 10,
                              description="I am member1")     
-        portal['memberfolder'].invokeFactory('dexterity.membrane.member', 'member2',
+        portal['memberfolder1'].invokeFactory('dexterity.membrane.member', 'member2',
                              email="13@qq.com",
                              last_name=u"唐",
                              first_name=u"岳军",
@@ -48,7 +48,7 @@ class TestView(unittest.TestCase):
                              bonus = 300,
                              description="I am member1")   
         
-        portal['memberfolder'].invokeFactory('dexterity.membrane.member', 'member3',
+        portal['memberfolder1'].invokeFactory('dexterity.membrane.member', 'member3',
                              email="12@qq.com",
                              last_name=u"唐",
                              first_name=u"岳军",
@@ -59,7 +59,7 @@ class TestView(unittest.TestCase):
                              bonus = 300,
                              description="I am member1")   
         
-        portal['memberfolder'].invokeFactory('dexterity.membrane.member', 'member4',
+        portal['memberfolder1'].invokeFactory('dexterity.membrane.member', 'member4',
                              email="12@qq.com",
                              last_name=u"唐",
                              first_name=u"岳军",
@@ -70,7 +70,7 @@ class TestView(unittest.TestCase):
                              bonus = 300,
                              description="I am member1")   
         
-        portal['memberfolder'].invokeFactory('dexterity.membrane.member', 'member5',
+        portal['memberfolder1'].invokeFactory('dexterity.membrane.member', 'member5',
                              email="15@qq.com",
                              last_name=u"唐",
                              first_name=u"岳军",
@@ -83,7 +83,7 @@ class TestView(unittest.TestCase):
           
  
         data = getFile('image.jpg').read()
-        item = portal['memberfolder']['member1']
+        item = portal['memberfolder1']['member1']
         item.photo = NamedImage(data, 'image/jpg', u'image.jpg')
            
         self.portal = portal
@@ -99,7 +99,7 @@ class TestView(unittest.TestCase):
         
         import transaction
         transaction.commit()
-        obj = portal['memberfolder'].absolute_url() + '/@@admin_view'        
+        obj = portal['memberfolder1'].absolute_url() + '/@@admin_view'        
 
         browser.open(obj)
  
