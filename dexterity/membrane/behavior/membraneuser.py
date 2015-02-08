@@ -104,7 +104,14 @@ class DxUserObject(object):
 @implementer(IMembraneUserObject)
 @adapter(IMembraneUser)
 class MembraneUserObject(DxUserObject):
-    pass
+    def get_full_name(self):
+        if context.title != "":return context.title
+
+        names = [
+            self.context.first_name,
+            self.context.last_name,
+            ]
+        return u' '.join([name for name in names if name])
 
 
 @implementer(IMembraneUserWorkflow)

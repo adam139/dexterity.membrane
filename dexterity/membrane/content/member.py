@@ -173,7 +173,12 @@ class ISponsorMember(IMember):
         title=_(u"Short Bio"),
         description=_(u"Tell us more about yourself"),
         required=False,
-    )    
+    )
+    orgname = schema.Choice(
+            title=_(u"organization name"),
+            source=DynamicVocabulary("my315ok.socialorgnization.content.governmentdepartment", "IOrgnization")
+                        )     
+        
 ### wechat member    
 class IWechatMember(IMember):
     """
@@ -189,6 +194,11 @@ class IWechatMember(IMember):
         description=_(u"Tell us more about yourself"),
         required=False,
     )
+    orgname = schema.Choice(
+            title=_(u"organization name"),
+            source=DynamicVocabulary("my315ok.socialorgnization.content.governmentdepartment", "IOrgnization")
+                        ) 
+
     
 ### conference member
 class IConferenceMember(IMember):
