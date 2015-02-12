@@ -46,6 +46,7 @@
     factory=".membraneuser.MembraneUserObject"
     provides=".membraneuser.IMembraneUserObject"
     />
+    
   <adapter
     factory=".membraneuser.MembraneUserWorkflow"
     provides=".membraneuser.IMembraneUserWorkflow"

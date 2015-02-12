@@ -117,6 +117,15 @@ class IMember(IEmail):
     """
     Member
     """
+    title = schema.TextLine(title=_(u"Full name"),
+            required=True)
+
+
+    description = schema.Text(
+        title=_(u"Short Bio"),
+        description=_(u"Tell us more about yourself"),
+        required=False,
+    )    
 
     first_name = schema.TextLine(
         title=_(u"First Name"),
@@ -144,17 +153,8 @@ class IMember(IEmail):
 class IOrganizationMember(IMember):
     """
     Organization Member
-    """
-    
-    title = schema.TextLine(title=_(u"Full name"),
-            required=True)
+    """    
 
-
-    description = schema.Text(
-        title=_(u"Short Bio"),
-        description=_(u"Tell us more about yourself"),
-        required=False,
-    )
     orgname = schema.Choice(
             title=_(u"organization name"),
             source=DynamicVocabulary("my315ok.socialorgnization.content.orgnization", "IOrgnization")
@@ -165,15 +165,15 @@ class ISponsorMember(IMember):
     Organization Member
     """
     
-    title = schema.TextLine(title=_(u"Full name"),
-            required=True)
-
-
-    description = schema.Text(
-        title=_(u"Short Bio"),
-        description=_(u"Tell us more about yourself"),
-        required=False,
-    )
+#    title = schema.TextLine(title=_(u"Full name"),
+#            required=True)
+#
+#
+#    description = schema.Text(
+#        title=_(u"Short Bio"),
+#        description=_(u"Tell us more about yourself"),
+#        required=False,
+#    )
     orgname = schema.Choice(
             title=_(u"organization name"),
             source=DynamicVocabulary("my315ok.socialorgnization.content.governmentdepartment", "IOrgnization")
@@ -185,15 +185,15 @@ class IWechatMember(IMember):
     Wechat Member
     """
     
-    title = schema.TextLine(title=_(u"Full name"),
-            required=True)
-
-
-    description = schema.Text(
-        title=_(u"Short Bio"),
-        description=_(u"Tell us more about yourself"),
-        required=False,
-    )
+#    title = schema.TextLine(title=_(u"Full name"),
+#            required=True)
+#
+#
+#    description = schema.Text(
+#        title=_(u"Short Bio"),
+#        description=_(u"Tell us more about yourself"),
+#        required=False,
+#    )
     orgname = schema.Choice(
             title=_(u"organization name"),
             source=DynamicVocabulary("my315ok.socialorgnization.content.governmentdepartment", "IOrgnization")
@@ -206,16 +206,15 @@ class IConferenceMember(IMember):
     Conference Member
     """
     
-    title = schema.TextLine(title=_(u"Full name"),
-            required=True)
-
-
-    description = schema.Text(
-        title=_(u"Short Bio"),
-        description=_(u"Tell us more about yourself"),
-        required=False,
-    )
-    
+#    title = schema.TextLine(title=_(u"Full name"),
+#            required=True)
+#
+#
+#    description = schema.Text(
+#        title=_(u"Short Bio"),
+#        description=_(u"Tell us more about yourself"),
+#        required=False,
+#    )    
   
     
     phone = schema.TextLine(
