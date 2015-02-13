@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-02-12 05:03+0000\n"
+"POT-Creation-Date: 2015-02-13 11:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,11 +45,11 @@ msgstr ""
 
 #: ./browser/templates/member_b3_view.pt:44
 #: ./browser/templates/member_view.pt:44
-#: ./content/member.py:140
+#: ./content/member.py:149
 msgid "Biography"
 msgstr ""
 
-#: ./content/member.py:309
+#: ./content/member.py:310
 msgid "Check this option if you need funding to attend."
 msgstr ""
 
@@ -61,7 +61,7 @@ msgid "Chongqing"
 msgstr ""
 
 #: ./browser/templates/member_b3_view.pt:191
-#: ./content/member.py:317
+#: ./content/member.py:318
 msgid "Comments"
 msgstr ""
 
@@ -74,7 +74,7 @@ msgid "Confirm Password"
 msgstr ""
 
 #: ./browser/templates/member_b3_view.pt:136
-#: ./content/member.py:260
+#: ./content/member.py:261
 msgid "Country"
 msgstr ""
 
@@ -117,11 +117,11 @@ msgstr ""
 
 #: ./browser/templates/member_b3_view.pt:39
 #: ./browser/templates/member_view.pt:39
-#: ./content/member.py:133
+#: ./content/member.py:142
 msgid "External Homepage"
 msgstr ""
 
-#: ./content/member.py:318
+#: ./content/member.py:319
 msgid "Fill in this field with things you need the organizers to know.        If you are roomsharing and already have a roommate, please mention your roommate's name here"
 msgstr ""
 
@@ -129,7 +129,7 @@ msgstr ""
 msgid "Finance"
 msgstr ""
 
-#: ./content/member.py:122
+#: ./content/member.py:131
 msgid "First Name"
 msgstr ""
 
@@ -137,7 +137,7 @@ msgstr ""
 msgid "Fujian"
 msgstr ""
 
-#: ./content/member.py:149
+#: ./content/member.py:120
 msgid "Full name"
 msgstr ""
 
@@ -186,7 +186,7 @@ msgstr ""
 msgid "Hunan"
 msgstr ""
 
-#: ./content/member.py:313
+#: ./content/member.py:314
 msgid "If you want or need a room, check this option"
 msgstr ""
 
@@ -202,7 +202,7 @@ msgstr ""
 msgid "Jilin"
 msgstr ""
 
-#: ./content/member.py:127
+#: ./content/member.py:136
 msgid "Last Name"
 msgstr ""
 
@@ -227,7 +227,7 @@ msgid "My bonus recorders(current bonus is:${bonus})"
 msgstr ""
 
 #: ./browser/templates/member_b3_view.pt:166
-#: ./content/member.py:308
+#: ./content/member.py:309
 msgid "Need funding"
 msgstr ""
 
@@ -258,7 +258,7 @@ msgid "Number"
 msgstr ""
 
 #: ./browser/templates/member_b3_view.pt:73
-#: ./content/member.py:232
+#: ./content/member.py:233
 msgid "Organization / Company"
 msgstr ""
 
@@ -267,30 +267,30 @@ msgid "Password"
 msgstr ""
 
 #: ./browser/templates/member_b3_view.pt:186
-#: ./content/member.py:336
+#: ./content/member.py:337
 msgid "Person Color Tag"
 msgstr ""
 
 #: ./browser/templates/member_b3_view.pt:111
-#: ./content/member.py:222
+#: ./content/member.py:223
 msgid "Phone number"
 msgstr ""
 
-#: ./content/member.py:296
+#: ./content/member.py:297
 msgid "Photo"
 msgstr ""
 
-#: ./content/member.py:349
+#: ./content/member.py:350
 msgid "Please upload image smaller than 512KB"
 msgstr ""
 
 #: ./browser/templates/member_b3_view.pt:78
-#: ./content/member.py:243
+#: ./content/member.py:244
 msgid "Position / Role in Organization"
 msgstr ""
 
 #: ./browser/templates/member_b3_view.pt:116
-#: ./content/member.py:290
+#: ./content/member.py:291
 msgid "QQ Number"
 msgstr ""
 
@@ -303,11 +303,11 @@ msgid "Register for site member"
 msgstr ""
 
 #: ./browser/templates/member_b3_view.pt:171
-#: ./content/member.py:312
+#: ./content/member.py:313
 msgid "Roomshare"
 msgstr ""
 
-#: ./content/member.py:237
+#: ./content/member.py:238
 msgid "Sector"
 msgstr ""
 
@@ -327,7 +327,7 @@ msgstr ""
 msgid "Shenzhen"
 msgstr ""
 
-#: ./content/member.py:154
+#: ./content/member.py:125
 msgid "Short Bio"
 msgstr ""
 
@@ -336,7 +336,7 @@ msgid "Sichuan"
 msgstr ""
 
 #: ./browser/templates/member_b3_view.pt:176
-#: ./content/member.py:328
+#: ./content/member.py:329
 msgid "T-shirt size"
 msgstr ""
 
@@ -344,7 +344,7 @@ msgstr ""
 msgid "Taiwan"
 msgstr ""
 
-#: ./content/member.py:155
+#: ./content/member.py:126
 msgid "Tell us more about yourself"
 msgstr ""
 
@@ -361,11 +361,11 @@ msgid "Update password"
 msgstr ""
 
 #: ./browser/templates/member_b3_view.pt:181
-#: ./content/member.py:323
+#: ./content/member.py:324
 msgid "Vegetarian?"
 msgstr ""
 
-#: ./content/member.py:261
+#: ./content/member.py:262
 msgid "Where you are from"
 msgstr ""
 
@@ -386,7 +386,7 @@ msgstr ""
 msgid "Xizang"
 msgstr ""
 
-#: ./content/member.py:297
+#: ./content/member.py:298
 msgid "Your photo or avatar. Recommended size is 150x195"
 msgstr ""
 
@@ -396,7 +396,7 @@ msgstr ""
 
 #: ./browser/templates/member_b3_view.pt:32
 #: ./browser/templates/member_view.pt:32
-#: ./content/member.py:281
+#: ./content/member.py:282
 msgid "bonus"
 msgstr ""
 
@@ -479,7 +479,7 @@ msgstr ""
 msgid "organization name"
 msgstr ""
 
-#: ./content/member.py:274
+#: ./content/member.py:275
 msgid "personal address"
 msgstr ""
 
@@ -493,7 +493,7 @@ msgid "register date"
 msgstr ""
 
 #: ./browser/templates/member_b3_view.pt:87
-#: ./content/member.py:249
+#: ./content/member.py:250
 msgid "research domain"
 msgstr ""
 
@@ -522,11 +522,11 @@ msgid "telecommunication"
 msgstr ""
 
 #: ./browser/templates/member_b3_view.pt:141
-#: ./content/member.py:268
+#: ./content/member.py:269
 msgid "the province of your company"
 msgstr ""
 
-#: ./content/member.py:282
+#: ./content/member.py:283
 msgid "user's bonus,user permission was controlled by this"
 msgstr ""
 

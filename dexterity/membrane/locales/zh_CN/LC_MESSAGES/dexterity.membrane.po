@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: membrane\n"
-"POT-Creation-Date: 2015-02-12 05:03+0000\n"
+"POT-Creation-Date: 2015-02-13 11:55+0000\n"
 "PO-Revision-Date: 2015-01-09 17:27+0800\n"
 "Last-Translator: adam <yuejun.tang@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,11 +45,11 @@ msgstr "北京"
 
 #: ./browser/templates/member_b3_view.pt:44
 #: ./browser/templates/member_view.pt:44
-#: ./content/member.py:140
+#: ./content/member.py:149
 msgid "Biography"
 msgstr "自我介绍"
 
-#: ./content/member.py:309
+#: ./content/member.py:310
 msgid "Check this option if you need funding to attend."
 msgstr "选择这个选项，如果你需要主办方支持。"
 
@@ -61,7 +61,7 @@ msgid "Chongqing"
 msgstr "重庆"
 
 #: ./browser/templates/member_b3_view.pt:191
-#: ./content/member.py:317
+#: ./content/member.py:318
 msgid "Comments"
 msgstr "留言"
 
@@ -74,7 +74,7 @@ msgid "Confirm Password"
 msgstr "确认密码"
 
 #: ./browser/templates/member_b3_view.pt:136
-#: ./content/member.py:260
+#: ./content/member.py:261
 msgid "Country"
 msgstr "国家"
 
@@ -117,11 +117,11 @@ msgstr "批准这个会员"
 
 #: ./browser/templates/member_b3_view.pt:39
 #: ./browser/templates/member_view.pt:39
-#: ./content/member.py:133
+#: ./content/member.py:142
 msgid "External Homepage"
 msgstr "我的主页"
 
-#: ./content/member.py:318
+#: ./content/member.py:319
 msgid "Fill in this field with things you need the organizers to know.        If you are roomsharing and already have a roommate, please mention your roommate's name here"
 msgstr "将你需要主办方知道的信息填写在下面。如果你打算和他人共住客房并且已有了同住房客，请在此留下同住房客的姓名。"
 
@@ -129,7 +129,7 @@ msgstr "将你需要主办方知道的信息填写在下面。如果你打算和
 msgid "Finance"
 msgstr "金融"
 
-#: ./content/member.py:122
+#: ./content/member.py:131
 msgid "First Name"
 msgstr ""
 
@@ -137,7 +137,7 @@ msgstr ""
 msgid "Fujian"
 msgstr "福建"
 
-#: ./content/member.py:149
+#: ./content/member.py:120
 msgid "Full name"
 msgstr "姓名"
 
@@ -186,7 +186,7 @@ msgstr "湖北"
 msgid "Hunan"
 msgstr "湖南"
 
-#: ./content/member.py:313
+#: ./content/member.py:314
 msgid "If you want or need a room, check this option"
 msgstr "如果你需要预定客房，请选择此选项"
 
@@ -202,7 +202,7 @@ msgstr "江西"
 msgid "Jilin"
 msgstr "吉林"
 
-#: ./content/member.py:127
+#: ./content/member.py:136
 msgid "Last Name"
 msgstr ""
 
@@ -227,7 +227,7 @@ msgid "My bonus recorders(current bonus is:${bonus})"
 msgstr "我的积分获取记录（当前积分是${bonus}）"
 
 #: ./browser/templates/member_b3_view.pt:166
-#: ./content/member.py:308
+#: ./content/member.py:309
 msgid "Need funding"
 msgstr "需要会务支持"
 
@@ -258,7 +258,7 @@ msgid "Number"
 msgstr "序号"
 
 #: ./browser/templates/member_b3_view.pt:73
-#: ./content/member.py:232
+#: ./content/member.py:233
 msgid "Organization / Company"
 msgstr "公司或单位"
 
@@ -267,30 +267,30 @@ msgid "Password"
 msgstr "密码"
 
 #: ./browser/templates/member_b3_view.pt:186
-#: ./content/member.py:336
+#: ./content/member.py:337
 msgid "Person Color Tag"
 msgstr "个性彩色标签"
 
 #: ./browser/templates/member_b3_view.pt:111
-#: ./content/member.py:222
+#: ./content/member.py:223
 msgid "Phone number"
 msgstr "电话号码"
 
-#: ./content/member.py:296
+#: ./content/member.py:297
 msgid "Photo"
 msgstr "相片"
 
-#: ./content/member.py:349
+#: ./content/member.py:350
 msgid "Please upload image smaller than 512KB"
 msgstr "请上载小于512KB的图片"
 
 #: ./browser/templates/member_b3_view.pt:78
-#: ./content/member.py:243
+#: ./content/member.py:244
 msgid "Position / Role in Organization"
 msgstr "职位"
 
 #: ./browser/templates/member_b3_view.pt:116
-#: ./content/member.py:290
+#: ./content/member.py:291
 msgid "QQ Number"
 msgstr "QQ号码"
 
@@ -303,11 +303,11 @@ msgid "Register for site member"
 msgstr "注册成为本站会员"
 
 #: ./browser/templates/member_b3_view.pt:171
-#: ./content/member.py:312
+#: ./content/member.py:313
 msgid "Roomshare"
 msgstr "共用客房"
 
-#: ./content/member.py:237
+#: ./content/member.py:238
 msgid "Sector"
 msgstr "行业"
 
@@ -327,7 +327,7 @@ msgstr "山西"
 msgid "Shenzhen"
 msgstr "深圳"
 
-#: ./content/member.py:154
+#: ./content/member.py:125
 msgid "Short Bio"
 msgstr "个人简介"
 
@@ -336,7 +336,7 @@ msgid "Sichuan"
 msgstr "四川"
 
 #: ./browser/templates/member_b3_view.pt:176
-#: ./content/member.py:328
+#: ./content/member.py:329
 msgid "T-shirt size"
 msgstr "文化衫大小"
 
@@ -344,7 +344,7 @@ msgstr "文化衫大小"
 msgid "Taiwan"
 msgstr "台湾"
 
-#: ./content/member.py:155
+#: ./content/member.py:126
 msgid "Tell us more about yourself"
 msgstr "告诉我们关于你自己的情况"
 
@@ -361,11 +361,11 @@ msgid "Update password"
 msgstr "更新密码"
 
 #: ./browser/templates/member_b3_view.pt:181
-#: ./content/member.py:323
+#: ./content/member.py:324
 msgid "Vegetarian?"
 msgstr "素食吗？"
 
-#: ./content/member.py:261
+#: ./content/member.py:262
 msgid "Where you are from"
 msgstr "来自哪里"
 
@@ -386,7 +386,7 @@ msgstr "新疆"
 msgid "Xizang"
 msgstr "西藏"
 
-#: ./content/member.py:297
+#: ./content/member.py:298
 msgid "Your photo or avatar. Recommended size is 150x195"
 msgstr "你的相片，建议尺寸为150x195px"
 
@@ -396,7 +396,7 @@ msgstr "浙江"
 
 #: ./browser/templates/member_b3_view.pt:32
 #: ./browser/templates/member_view.pt:32
-#: ./content/member.py:281
+#: ./content/member.py:282
 msgid "bonus"
 msgstr "积分"
 
@@ -479,7 +479,7 @@ msgstr "操作"
 msgid "organization name"
 msgstr ""
 
-#: ./content/member.py:274
+#: ./content/member.py:275
 msgid "personal address"
 msgstr "个人联系地址"
 
@@ -493,7 +493,7 @@ msgid "register date"
 msgstr "注册日期"
 
 #: ./browser/templates/member_b3_view.pt:87
-#: ./content/member.py:249
+#: ./content/member.py:250
 msgid "research domain"
 msgstr "研究领域"
 
@@ -522,11 +522,11 @@ msgid "telecommunication"
 msgstr "电信"
 
 #: ./browser/templates/member_b3_view.pt:141
-#: ./content/member.py:268
+#: ./content/member.py:269
 msgid "the province of your company"
 msgstr "公司所在省份"
 
-#: ./content/member.py:282
+#: ./content/member.py:283
 msgid "user's bonus,user permission was controlled by this"
 msgstr "注意：会员的权限取决与其积分！"
 

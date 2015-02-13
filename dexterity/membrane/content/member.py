@@ -157,7 +157,9 @@ class IOrganizationMember(IMember):
 
     orgname = schema.Choice(
             title=_(u"organization name"),
-            source=DynamicVocabulary("my315ok.socialorgnization.content.orgnization", "IOrgnization")
+            source=DynamicVocabulary("my315ok.socialorgnization.content.orgnization",
+                                     "IOrgnization",
+                                     orgnization_belondtoArea="xiangtanshi")
                         )  
 ### organization sponsor member
 class ISponsorMember(IMember):
