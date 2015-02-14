@@ -57,7 +57,10 @@ class NameFromFullName(object):
 
     @property
     def title(self):
-        return IMembraneUserObject(self.context).get_full_name()
+#        return IMembraneUserObject(self.context).get_full_name()
+
+        if self.context.title:return self.context.title
+        return self.context.id    
 
 
 class DxUserObject(object):
@@ -81,6 +84,7 @@ class DxUserObject(object):
         return self.context.username
 
     def get_full_name(self):
+        if self.context.title != "":return self.context.title
         names = [
             self.context.first_name,
             self.context.last_name,
@@ -105,7 +109,7 @@ class DxUserObject(object):
 @adapter(IMembraneUser)
 class MembraneUserObject(DxUserObject):
     def get_full_name(self):
-        if context.title != "":return context.title
+        if self.context.title != "":return self.context.title
 
         names = [
             self.context.first_name,
