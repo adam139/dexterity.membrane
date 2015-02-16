@@ -164,7 +164,7 @@ class IOrganizationMember(IMember):
 ### organization sponsor member
 class ISponsorMember(IMember):
     """
-    Organization Member
+    Government department Member
     """
     
 #    title = schema.TextLine(title=_(u"Full name"),
@@ -177,7 +177,7 @@ class ISponsorMember(IMember):
 #        required=False,
 #    )
     orgname = schema.Choice(
-            title=_(u"organization name"),
+            title=_(u"Government department"),
             source=DynamicVocabulary("my315ok.socialorgnization.content.governmentdepartment", "IOrgnization")
                         )     
         

@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: membrane\n"
-"POT-Creation-Date: 2015-02-13 11:55+0000\n"
-"PO-Revision-Date: 2015-01-09 17:27+0800\n"
+"POT-Creation-Date: 2015-02-16 13:36+0000\n"
+"PO-Revision-Date: 2015-02-16 20:25+0800\n"
 "Last-Translator: adam <yuejun.tang@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -92,7 +92,7 @@ msgstr "禁止"
 
 #: ./content/member.py:94
 msgid "E-mail Address"
-msgstr ""
+msgstr "邮件地址"
 
 #: ./browser/member_view.py:96
 msgid "Edit user bonus"
@@ -109,7 +109,7 @@ msgstr "邮件地址"
 
 #: ./membrane_helpers.py:88
 msgid "Email ${email} is already in use."
-msgstr ""
+msgstr "邮件地址${email} 已经被使用了。"
 
 #: profiles/default/workflows/dexterity_membrane_workflow/definition.xml
 msgid "Enable this member"
@@ -131,7 +131,7 @@ msgstr "金融"
 
 #: ./content/member.py:131
 msgid "First Name"
-msgstr ""
+msgstr "名"
 
 #: ./vocabulary.py:30
 msgid "Fujian"
@@ -153,6 +153,10 @@ msgstr "地理信息"
 #: ./vocabulary.py:56
 msgid "Government"
 msgstr "政府"
+
+#: ./content/member.py:180
+msgid "Government department"
+msgstr "政府部门"
 
 #: ./vocabulary.py:31
 msgid "Guangdong"
@@ -204,7 +208,7 @@ msgstr "吉林"
 
 #: ./content/member.py:136
 msgid "Last Name"
-msgstr ""
+msgstr "姓"
 
 #: ./profiles/example/types/dexterity.membrane.member.xml
 #: ./profiles/example/types/dexterity.membrane.organizationmember.xml
@@ -425,7 +429,7 @@ msgstr "咨询"
 #. Default: "Your account has been created,we have sent instructions for setting a password to this email address: ${address}"
 #: ./patch/membership.py:72
 msgid "create_membrane_account_succesful"
-msgstr ""
+msgstr "会员账号已成功创建"
 
 #: ./browser/templates/bonus_b3_recorders.pt:26
 #: ./browser/templates/bonus_recorders.pt:26
@@ -477,7 +481,7 @@ msgstr "操作"
 
 #: ./content/member.py:159
 msgid "organization name"
-msgstr ""
+msgstr "社会组织名称"
 
 #: ./content/member.py:275
 msgid "personal address"
