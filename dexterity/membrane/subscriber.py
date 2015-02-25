@@ -43,7 +43,7 @@ def getMember(context,email):
     if len(memberbrains) == 0:return None
     return memberbrains[0].getObject()
 
-@grok.subscribe(IMember, IAfterTransitionEvent)
+#@grok.subscribe(IMember, IAfterTransitionEvent)
 def sendPasswdResetMail(member, event):
     """
     """
