@@ -9,7 +9,7 @@ from zope.interface import Invalid, invariant
 import re
 from plone.namedfile.field import NamedBlobImage
 
-from my315ok.socialorgnization.registrysource import RegistrySource, DynamicVocabulary
+from my315ok.socialorgnization.registrysource import RegistrySource, DynamicVocabulary,FirstDynamicVocabulary
 from my315ok.socialorgnization.content.orgnization import IOrgnization
 
 def is_email(value):
@@ -149,16 +149,18 @@ class IMember(IEmail):
         title=_(u"Biography"),
         required=False,
         )
-### organization member
+### organization membe
+inlist = ["市民政局","市科协","市社科联","市文联","市工商联"]
 class IOrganizationMember(IMember):
     """
     Organization Member
     """    
 
+#    inlist = ["市民政局","市科协","市社科联","市文联","市工商联"]
     orgname = schema.Choice(
             title=_(u"organization name"),
-            source=DynamicVocabulary("my315ok.socialorgnization.content.orgnization",
-                                     "IOrgnization",
+            source=FirstDynamicVocabulary("my315ok.socialorgnization.content.orgnization",
+                                     "IOrgnization",inlist,
                                      orgnization_belondtoArea="xiangtanshi")
                         )  
 ### organization sponsor member
