@@ -284,11 +284,7 @@ class IConferenceMember(IMember):
 
         )          
     
-    photo = NamedBlobImage(
-        title=_(u"Photo"),
-        description=_(u"Your photo or avatar. Recommended size is 150x195"),
-        required=False
-    )
+
 
 
 #    form.fieldset('sponsorship',
@@ -334,7 +330,7 @@ class IConferenceMember(IMember):
     form.omitted('bonus')   
 
 
-@form.validator(field=IConferenceMember['photo'])
+@form.validator(field=IMember['photo'])
 def maxPhotoSize(value):
     if value is not None:
         if value.getSize()/1024 > 512:
