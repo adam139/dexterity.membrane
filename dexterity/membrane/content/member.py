@@ -149,6 +149,12 @@ class IMember(IEmail):
         title=_(u"Biography"),
         required=False,
         )
+    
+    photo = NamedBlobImage(
+        title=_(u"Photo"),
+        description=_(u"Your photo or avatar. Recommended size is 150x195"),
+        required=False
+    )    
 ### organization membe
 inlist = ["市民政局","市科协","市社科联","市文联","市工商联"]
 class IOrganizationMember(IMember):
@@ -169,15 +175,7 @@ class ISponsorMember(IMember):
     Government department Member
     """
     
-#    title = schema.TextLine(title=_(u"Full name"),
-#            required=True)
-#
-#
-#    description = schema.Text(
-#        title=_(u"Short Bio"),
-#        description=_(u"Tell us more about yourself"),
-#        required=False,
-#    )
+
     orgname = schema.Choice(
             title=_(u"Government department"),
             source=DynamicVocabulary("my315ok.socialorgnization.content.governmentdepartment", "IOrgnization")
@@ -189,48 +187,44 @@ class IWechatMember(IMember):
     Wechat Member
     """
     
-#    title = schema.TextLine(title=_(u"Full name"),
-#            required=True)
-#
-#
-#    description = schema.Text(
-#        title=_(u"Short Bio"),
-#        description=_(u"Tell us more about yourself"),
-#        required=False,
-#    )
-    orgname = schema.Choice(
-            title=_(u"organization name"),
-            source=DynamicVocabulary("my315ok.socialorgnization.content.governmentdepartment", "IOrgnization")
-                        ) 
+    phone = schema.TextLine(
+        title=_(u"Phone number"),
+        required=True
+    )
+    organization = schema.Text(
+        title=_(u"organization"),
+        required=False,
+    )
+    sector = schema.Choice(
+        title=_(u"Sector"),
+        required=True,
+        vocabulary="dexterity.membrane.vocabulary.sector"
+        )
+    address = schema.TextLine(
+        title=_(u"personal address"),       
+        required=False,
+        ) 
+    qq_number = schema.Int(
+        # url format
+        title=_(u"QQ Number"),
+        required=False,
 
+        )      
+          
     
 ### conference member
 class IConferenceMember(IMember):
     """
     Conference Member
     """
-    
-#    title = schema.TextLine(title=_(u"Full name"),
-#            required=True)
-#
-#
-#    description = schema.Text(
-#        title=_(u"Short Bio"),
-#        description=_(u"Tell us more about yourself"),
-#        required=False,
-#    )    
-  
+ 
     
     phone = schema.TextLine(
         title=_(u"Phone number"),
         required=True
     )
     
-#    form.fieldset('work',
-#            label=_(u"Work"),
-#            fields=['organization', 'sector','position', 'research_domain']
-#    )
-    
+   
     organization = schema.TextLine(
         title=_(u"Organization / Company"),
         required=True,
@@ -253,11 +247,6 @@ class IConferenceMember(IMember):
         required=False,
 
         )
-           
-#    form.fieldset('geography',
-#            label=_(u"Geography"),
-#            fields=['country', 'province','address']
-#    )
     
     country = schema.Choice(
         title=_(u"Country"),
