@@ -3,7 +3,7 @@ import json
 import hmac
 from hashlib import sha1 as sha
 from Products.CMFCore.utils import getToolByName
-from dexterity.membrane.testing import FUNCTIONAL_TESTING
+from dexterity.membrane.testing import DEXTERITY_MEMBRANE_FUNCTIONAL_TESTING as FUNCTIONAL_TESTING
 
 from zope.component import getUtility
 from plone.keyring.interfaces import IKeyManager 
@@ -11,7 +11,7 @@ from plone.keyring.interfaces import IKeyManager
 from plone.app.testing import TEST_USER_ID, login, TEST_USER_NAME, \
     TEST_USER_PASSWORD, setRoles
 from plone.testing.z2 import Browser
-import unittest2 as unittest
+import unittest
 from plone.namedfile.file import NamedImage
 import os
 
@@ -31,7 +31,7 @@ class TestView(unittest.TestCase):
 #        pdb.set_trace()
         start = datetime.datetime.today()
         end = start + datetime.timedelta(7)
-        portal.invokeFactory('dexterity.membrane.memberfolder1', 'memberfolder1')
+        portal.invokeFactory('dexterity.membrane.memberfolder', 'memberfolder1')
         
         portal['memberfolder1'].invokeFactory('dexterity.membrane.member', 'member1',
                              email="12@qq.com",

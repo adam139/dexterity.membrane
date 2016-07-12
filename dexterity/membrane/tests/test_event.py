@@ -1,5 +1,5 @@
 #-*- coding: UTF-8 -*-
-import unittest2 as unittest
+import unittest
 from zope import event
 from collective.conference.testing import INTEGRATION_TESTING
 from collective.conference.testing import FUNCTIONAL_TESTING

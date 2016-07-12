@@ -16,14 +16,12 @@ from dexterity.membrane.content.member import IMember
 from dexterity.membrane.behavior.membranepassword import IProvidePasswords 
 from dexterity.membrane import _
 from my315ok.socialorgnization.content.orgnization import IOrgnization_annual_survey
-from wechat.policy.browser.interfaces import  IThemeSpecific
 import datetime
 
 grok.templatedir('templates')
 
 class MemberUrlView(grok.View):
     grok.name('member_url')
-#    grok.require("zope.Public")    
     grok.require('zope2.View')
     grok.context(Interface)
 
