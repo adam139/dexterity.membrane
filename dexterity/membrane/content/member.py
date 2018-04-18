@@ -163,12 +163,12 @@ class IOrganizationMember(IMember):
     """    
 
 #    inlist = ["市民政局","市科协","市社科联","市文联","市工商联"]
-    orgname = schema.Choice(
-            title=_(u"organization name"),
-            source=FirstDynamicVocabulary("my315ok.socialorgnization.content.orgnization",
-                                     "IOrgnization",inlist,
-                                     orgnization_belondtoArea="xiangtanshi")
-                        )  
+#     orgname = schema.Choice(
+#             title=_(u"organization name"),
+#             source=FirstDynamicVocabulary("my315ok.socialorgnization.content.orgnization",
+#                                      "IOrgnization",inlist,
+#                                      orgnization_belondtoArea="xiangtanshi")
+#                         )  
 ### organization sponsor member
 class ISponsorMember(IMember):
     """
@@ -176,10 +176,10 @@ class ISponsorMember(IMember):
     """
     
 
-    orgname = schema.Choice(
-            title=_(u"Government department"),
-            source=DynamicVocabulary("my315ok.socialorgnization.content.governmentdepartment", "IOrgnization")
-                        )     
+#     orgname = schema.Choice(
+#             title=_(u"Government department"),
+#             source=DynamicVocabulary("my315ok.socialorgnization.content.governmentdepartment", "IOrgnization")
+#                         )     
         
 ### wechat member    
 class IWechatMember(IMember):
