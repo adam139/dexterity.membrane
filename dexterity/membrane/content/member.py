@@ -92,6 +92,7 @@ class IEmail(form.Schema):
         # String with validation in place looking for @, required.
         # Note that a person's email address will be their username.
         title=_(u"E-mail Address"),
+        description=_(u"email address using as activated account,must be valid"),
         required=True,
         constraint=is_email,
         )

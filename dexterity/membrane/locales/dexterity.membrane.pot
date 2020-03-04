@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-02-16 13:36+0000\n"
+"POT-Creation-Date: 2020-03-04 00:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,43 +25,43 @@ msgstr ""
 msgid "Agree this?"
 msgstr ""
 
-#: ./vocabulary.py:26
+#: ./browser/vocabulary.py:26
 msgid "Anhui"
 msgstr ""
 
-#: ./vocabulary.py:37
+#: ./browser/vocabulary.py:37
 msgid "Aomen"
 msgstr ""
 
-#: ./browser/member_view.py:110
+#: ./browser/member_view.py:111
 #: ./browser/templates/member_b3_view.pt:19
 #: ./browser/templates/member_view.pt:19
 msgid "Base information"
 msgstr ""
 
-#: ./vocabulary.py:11
+#: ./browser/vocabulary.py:11
 msgid "Beijing"
 msgstr ""
 
 #: ./browser/templates/member_b3_view.pt:44
 #: ./browser/templates/member_view.pt:44
-#: ./content/member.py:149
+#: ./content/member.py:150
 msgid "Biography"
 msgstr ""
 
-#: ./content/member.py:310
+#: ./content/member.py:298
 msgid "Check this option if you need funding to attend."
 msgstr ""
 
 msgid "China"
 msgstr ""
 
-#: ./vocabulary.py:39
+#: ./browser/vocabulary.py:39
 msgid "Chongqing"
 msgstr ""
 
 #: ./browser/templates/member_b3_view.pt:191
-#: ./content/member.py:318
+#: ./content/member.py:306
 msgid "Comments"
 msgstr ""
 
@@ -69,12 +69,20 @@ msgstr ""
 msgid "Conference information"
 msgstr ""
 
+#: ./configure.zcml:24
+msgid "Configuration for the dexterity.membrane behaviors"
+msgstr ""
+
+#: ./content/configure.zcml:16
+msgid "Configuration for the dexterity.membrane example content type"
+msgstr ""
+
 #: ./behavior/membranepassword.py:47
 msgid "Confirm Password"
 msgstr ""
 
 #: ./browser/templates/member_b3_view.pt:136
-#: ./content/member.py:261
+#: ./content/member.py:253
 msgid "Country"
 msgstr ""
 
@@ -94,11 +102,11 @@ msgstr ""
 msgid "E-mail Address"
 msgstr ""
 
-#: ./browser/member_view.py:96
+#: ./browser/member_view.py:97
 msgid "Edit user bonus"
 msgstr ""
 
-#: ./vocabulary.py:55
+#: ./browser/vocabulary.py:55
 msgid "Education"
 msgstr ""
 
@@ -117,96 +125,92 @@ msgstr ""
 
 #: ./browser/templates/member_b3_view.pt:39
 #: ./browser/templates/member_view.pt:39
-#: ./content/member.py:142
+#: ./content/member.py:143
 msgid "External Homepage"
 msgstr ""
 
-#: ./content/member.py:319
+#: ./content/member.py:307
 msgid "Fill in this field with things you need the organizers to know.        If you are roomsharing and already have a roommate, please mention your roommate's name here"
 msgstr ""
 
-#: ./vocabulary.py:57
+#: ./browser/vocabulary.py:57
 msgid "Finance"
 msgstr ""
 
-#: ./content/member.py:131
+#: ./content/member.py:132
 msgid "First Name"
 msgstr ""
 
-#: ./vocabulary.py:30
+#: ./browser/vocabulary.py:30
 msgid "Fujian"
 msgstr ""
 
-#: ./content/member.py:120
+#: ./content/member.py:121
 msgid "Full name"
 msgstr ""
 
-#: ./vocabulary.py:42
+#: ./browser/vocabulary.py:42
 msgid "Gansu"
 msgstr ""
 
-#: ./browser/member_view.py:154
+#: ./browser/member_view.py:155
 #: ./browser/templates/member_b3_view.pt:128
 msgid "Geography information"
 msgstr ""
 
-#: ./vocabulary.py:56
+#: ./browser/vocabulary.py:56
 msgid "Government"
 msgstr ""
 
-#: ./content/member.py:180
-msgid "Government department"
-msgstr ""
-
-#: ./vocabulary.py:31
+#: ./browser/vocabulary.py:31
 msgid "Guangdong"
 msgstr ""
 
-#: ./vocabulary.py:32
+#: ./browser/vocabulary.py:32
 msgid "Guangxi"
 msgstr ""
 
-#: ./vocabulary.py:34
+#: ./browser/vocabulary.py:34
 msgid "Guizhou"
 msgstr ""
 
-#: ./vocabulary.py:43
+#: ./browser/vocabulary.py:43
 msgid "Hainan"
 msgstr ""
 
-#: ./vocabulary.py:17
+#: ./browser/vocabulary.py:17
 msgid "Heber"
 msgstr ""
 
-#: ./vocabulary.py:18
+#: ./browser/vocabulary.py:18
 msgid "Henan"
 msgstr ""
 
-#: ./vocabulary.py:10
+#: ./browser/vocabulary.py:10
 msgid "Hubei"
 msgstr ""
 
-#: ./vocabulary.py:9
+#: ./browser/vocabulary.py:9
 msgid "Hunan"
 msgstr ""
 
-#: ./content/member.py:314
+#: ./content/member.py:302
 msgid "If you want or need a room, check this option"
 msgstr ""
 
-#: ./vocabulary.py:27
+#: ./browser/vocabulary.py:27
 msgid "Jiangsu"
 msgstr ""
 
-#: ./vocabulary.py:40
+#: ./browser/vocabulary.py:40
 msgid "Jiangxi"
 msgstr ""
 
-#: ./vocabulary.py:13
+#: ./browser/vocabulary.py:13
 msgid "Jilin"
 msgstr ""
 
-#: ./content/member.py:136
+#: ./content/member.py:137
 msgid "Last Name"
 msgstr ""
 
@@ -225,26 +229,38 @@ msgstr ""
 msgid "Membership"
 msgstr ""
 
+#: ./behavior/configure.zcml:33
+msgid "Membrane Group"
+msgstr ""
+
+#: ./behavior/configure.zcml:16
+msgid "Membrane User"
+msgstr ""
+
 #: ./browser/templates/bonus_b3_recorders.pt:19
 #: ./browser/templates/bonus_recorders.pt:19
 msgid "My bonus recorders(current bonus is:${bonus})"
 msgstr ""
 
+#: ./behavior/configure.zcml:24
+msgid "Name from full name"
+msgstr ""
+
 #: ./browser/templates/member_b3_view.pt:166
-#: ./content/member.py:309
+#: ./content/member.py:297
 msgid "Need funding"
 msgstr ""
 
-#: ./vocabulary.py:19
+#: ./browser/vocabulary.py:19
 msgid "Neimenggu"
 msgstr ""
 
-#: ./browser/member_view.py:132
+#: ./browser/member_view.py:133
 #: ./browser/templates/member_b3_view.pt:98
 msgid "Network information"
 msgstr ""
 
-#: ./vocabulary.py:41
+#: ./browser/vocabulary.py:41
 msgid "Ningxia"
 msgstr ""
 
@@ -262,43 +278,44 @@ msgid "Number"
 msgstr ""
 
 #: ./browser/templates/member_b3_view.pt:73
-#: ./content/member.py:233
+#: ./content/member.py:230
 msgid "Organization / Company"
 msgstr ""
 
+#: ./behavior/configure.zcml:42
 #: ./behavior/membranepassword.py:42
 msgid "Password"
 msgstr ""
 
 #: ./browser/templates/member_b3_view.pt:186
-#: ./content/member.py:337
+#: ./content/member.py:325
 msgid "Person Color Tag"
 msgstr ""
 
 #: ./browser/templates/member_b3_view.pt:111
-#: ./content/member.py:223
+#: ./content/member.py:192
 msgid "Phone number"
 msgstr ""
 
-#: ./content/member.py:297
+#: ./content/member.py:155
 msgid "Photo"
 msgstr ""
 
-#: ./content/member.py:350
+#: ./content/member.py:338
 msgid "Please upload image smaller than 512KB"
 msgstr ""
 
 #: ./browser/templates/member_b3_view.pt:78
-#: ./content/member.py:244
+#: ./content/member.py:241
 msgid "Position / Role in Organization"
 msgstr ""
 
 #: ./browser/templates/member_b3_view.pt:116
-#: ./content/member.py:291
+#: ./content/member.py:210
 msgid "QQ Number"
 msgstr ""
 
-#: ./vocabulary.py:21
+#: ./browser/vocabulary.py:21
 msgid "Qinghai"
 msgstr ""
 
@@ -307,48 +324,52 @@ msgid "Register for site member"
 msgstr ""
 
 #: ./browser/templates/member_b3_view.pt:171
-#: ./content/member.py:313
+#: ./content/member.py:301
 msgid "Roomshare"
 msgstr ""
 
-#: ./content/member.py:238
+#: ./content/member.py:200
 msgid "Sector"
 msgstr ""
 
-#: ./vocabulary.py:15
+#: ./browser/vocabulary.py:15
 msgid "Shandong"
 msgstr ""
 
-#: ./vocabulary.py:25
+#: ./browser/vocabulary.py:25
 msgid "Shanghai"
 msgstr ""
 
-#: ./vocabulary.py:16
+#: ./browser/vocabulary.py:16
 msgid "Shanxi"
 msgstr ""
 
-#: ./vocabulary.py:35
+#: ./browser/vocabulary.py:35
 msgid "Shenzhen"
 msgstr ""
 
-#: ./content/member.py:125
+#: ./content/member.py:126
 msgid "Short Bio"
 msgstr ""
 
-#: ./vocabulary.py:29
+#: ./browser/vocabulary.py:29
 msgid "Sichuan"
 msgstr ""
 
+#: ./behavior/configure.zcml:42
+msgid "Store password on this content"
+msgstr ""
+
 #: ./browser/templates/member_b3_view.pt:176
-#: ./content/member.py:329
+#: ./content/member.py:317
 msgid "T-shirt size"
 msgstr ""
 
-#: ./vocabulary.py:38
+#: ./browser/vocabulary.py:38
 msgid "Taiwan"
 msgstr ""
 
-#: ./content/member.py:126
+#: ./content/member.py:127
 msgid "Tell us more about yourself"
 msgstr ""
 
@@ -356,51 +377,63 @@ msgstr ""
 msgid "The password and confirmation do not match."
 msgstr ""
 
-#: ./vocabulary.py:24
+#: ./browser/vocabulary.py:24
 msgid "Tianjin"
 msgstr ""
 
-#: ./browser/member_view.py:121
+#: ./browser/member_view.py:122
 msgid "Update password"
 msgstr ""
 
+#: ./behavior/configure.zcml:24
+msgid "Use the full name as name (basis for the id)"
+msgstr ""
+
+#: ./behavior/configure.zcml:33
+msgid "Use this content as a membrane group"
+msgstr ""
+
+#: ./behavior/configure.zcml:16
+msgid "Use this content as a membrane user"
+msgstr ""
+
 #: ./browser/templates/member_b3_view.pt:181
-#: ./content/member.py:324
+#: ./content/member.py:312
 msgid "Vegetarian?"
 msgstr ""
 
-#: ./content/member.py:262
+#: ./content/member.py:254
 msgid "Where you are from"
 msgstr ""
 
-#: ./browser/member_view.py:143
+#: ./browser/member_view.py:144
 #: ./browser/templates/member_b3_view.pt:65
 msgid "Work information"
 msgstr ""
 
-#: ./vocabulary.py:36
+#: ./browser/vocabulary.py:36
 msgid "Xianggang"
 msgstr ""
 
-#: ./vocabulary.py:20
+#: ./browser/vocabulary.py:20
 msgid "Xinqiang"
 msgstr ""
 
-#: ./vocabulary.py:22
+#: ./browser/vocabulary.py:22
 msgid "Xizang"
 msgstr ""
 
-#: ./content/member.py:298
+#: ./content/member.py:156
 msgid "Your photo or avatar. Recommended size is 150x195"
 msgstr ""
 
-#: ./vocabulary.py:28
+#: ./browser/vocabulary.py:28
 msgid "Zhejiang"
 msgstr ""
 
 #: ./browser/templates/member_b3_view.pt:32
 #: ./browser/templates/member_view.pt:32
-#: ./content/member.py:282
+#: ./content/member.py:274
 msgid "bonus"
 msgstr ""
 
@@ -418,11 +451,11 @@ msgstr ""
 msgid "change wechat"
 msgstr ""
 
-#: ./browser/member_view.py:166
+#: ./browser/member_view.py:167
 msgid "conference information"
 msgstr ""
 
-#: ./vocabulary.py:59
+#: ./browser/vocabulary.py:59
 msgid "consult"
 msgstr ""
 
@@ -436,28 +469,40 @@ msgstr ""
 msgid "description"
 msgstr ""
 
+#: ./configure.zcml:24
+msgid "dexterity.membrane: behaviors"
+msgstr ""
+
+#: ./content/configure.zcml:16
+msgid "dexterity.membrane: content"
+msgstr ""
+
 #: ./browser/templates/member_b3_listing.pt:29
 #: ./browser/templates/member_listing.pt:29
 msgid "email"
 msgstr ""
 
-#: ./vocabulary.py:58
+#: ./content/member.py:95
+msgid "email address using as activated account,must be valid"
+msgstr ""
+
+#: ./browser/vocabulary.py:58
 msgid "energy"
 msgstr ""
 
-#: ./vocabulary.py:62
+#: ./browser/vocabulary.py:62
 msgid "enterprise"
 msgstr ""
 
-#: ./vocabulary.py:12
+#: ./browser/vocabulary.py:12
 msgid "heilongjiang"
 msgstr ""
 
-#: ./vocabulary.py:14
+#: ./browser/vocabulary.py:14
 msgid "liaolin"
 msgstr ""
 
-#: ./vocabulary.py:60
+#: ./browser/vocabulary.py:60
 msgid "manufacture"
 msgstr ""
 
@@ -479,11 +524,11 @@ msgstr ""
 msgid "operations"
 msgstr ""
 
-#: ./content/member.py:159
-msgid "organization name"
+#: ./content/member.py:196
+msgid "organization"
 msgstr ""
 
-#: ./content/member.py:275
+#: ./content/member.py:205
 msgid "personal address"
 msgstr ""
 
@@ -497,7 +542,7 @@ msgid "register date"
 msgstr ""
 
 #: ./browser/templates/member_b3_view.pt:87
-#: ./content/member.py:250
+#: ./content/member.py:247
 msgid "research domain"
 msgstr ""
 
@@ -521,16 +566,16 @@ msgstr ""
 msgid "status_nonfatal_password_mail"
 msgstr ""
 
-#: ./vocabulary.py:61
+#: ./browser/vocabulary.py:61
 msgid "telecommunication"
 msgstr ""
 
 #: ./browser/templates/member_b3_view.pt:141
-#: ./content/member.py:269
+#: ./content/member.py:261
 msgid "the province of your company"
 msgstr ""
 
-#: ./content/member.py:283
+#: ./content/member.py:275
 msgid "user's bonus,user permission was controlled by this"
 msgstr ""
 
@@ -546,7 +591,6 @@ msgstr ""
 msgid "your job belong to sector"
 msgstr ""
 
-#: ./vocabulary.py:33
+#: ./browser/vocabulary.py:33
 msgid "yunnan"
 msgstr ""
-

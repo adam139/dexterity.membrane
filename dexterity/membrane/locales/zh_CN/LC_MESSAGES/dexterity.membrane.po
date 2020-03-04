@@ -4,81 +4,87 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: membrane\n"
-"POT-Creation-Date: 2015-02-16 13:36+0000\n"
-"PO-Revision-Date: 2015-02-16 20:25+0800\n"
-"Last-Translator: adam <yuejun.tang@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2020-03-04 00:16+0000\n"
+"PO-Revision-Date: 2020-03-04 08:42+0800\n"
+"Last-Translator: Adam <yuejun.tang@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "Language-Code: en\n"
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: dexterity.membrane\n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
-#: ./browser/templates/member_b3_view.pt:146
+#: browser/templates/member_b3_view.pt:146
 msgid "Address"
 msgstr "地址"
 
-#: ./browser/register.py:75
+#: browser/register.py:75
 msgid "Agree this?"
 msgstr "同意这个协议？"
 
-#: ./vocabulary.py:26
+#: browser/vocabulary.py:26
 msgid "Anhui"
 msgstr "安徽"
 
-#: ./vocabulary.py:37
+#: browser/vocabulary.py:37
 msgid "Aomen"
 msgstr "澳门"
 
-#: ./browser/member_view.py:110
-#: ./browser/templates/member_b3_view.pt:19
-#: ./browser/templates/member_view.pt:19
+#: browser/member_view.py:111 browser/templates/member_b3_view.pt:19
+#: browser/templates/member_view.pt:19
 msgid "Base information"
 msgstr "基本信息"
 
-#: ./vocabulary.py:11
+#: browser/vocabulary.py:11
 msgid "Beijing"
 msgstr "北京"
 
-#: ./browser/templates/member_b3_view.pt:44
-#: ./browser/templates/member_view.pt:44
-#: ./content/member.py:149
+#: browser/templates/member_b3_view.pt:44 browser/templates/member_view.pt:44
+#: content/member.py:150
 msgid "Biography"
 msgstr "自我介绍"
 
-#: ./content/member.py:310
+#: content/member.py:298
 msgid "Check this option if you need funding to attend."
 msgstr "选择这个选项，如果你需要主办方支持。"
 
 msgid "China"
 msgstr "中国"
 
-#: ./vocabulary.py:39
+#: browser/vocabulary.py:39
 msgid "Chongqing"
 msgstr "重庆"
 
-#: ./browser/templates/member_b3_view.pt:191
-#: ./content/member.py:318
+#: browser/templates/member_b3_view.pt:191 content/member.py:306
 msgid "Comments"
 msgstr "留言"
 
-#: ./browser/templates/member_b3_view.pt:158
+#: browser/templates/member_b3_view.pt:158
 msgid "Conference information"
 msgstr "会务信息"
 
-#: ./behavior/membranepassword.py:47
+#: configure.zcml:24
+msgid "Configuration for the dexterity.membrane behaviors"
+msgstr ""
+
+#: content/configure.zcml:16
+msgid "Configuration for the dexterity.membrane example content type"
+msgstr ""
+
+#: behavior/membranepassword.py:47
 msgid "Confirm Password"
 msgstr "确认密码"
 
-#: ./browser/templates/member_b3_view.pt:136
-#: ./content/member.py:261
+#: browser/templates/member_b3_view.pt:136 content/member.py:253
 msgid "Country"
 msgstr "国家"
 
-#: ./profiles/default/controlpanel.xml
+#: profiles/default/controlpanel.xml
 msgid "Dexterity Membrane Behavior Settings"
 msgstr "Dexterity会员系统设置"
 
@@ -90,24 +96,23 @@ msgstr "禁止这个会员"
 msgid "Disabled"
 msgstr "禁止"
 
-#: ./content/member.py:94
+#: content/member.py:94
 msgid "E-mail Address"
 msgstr "邮件地址"
 
-#: ./browser/member_view.py:96
+#: browser/member_view.py:97
 msgid "Edit user bonus"
 msgstr "编辑会员积分"
 
-#: ./vocabulary.py:55
+#: browser/vocabulary.py:55
 msgid "Education"
 msgstr "教育"
 
-#: ./browser/templates/member_b3_view.pt:28
-#: ./browser/templates/member_view.pt:28
+#: browser/templates/member_b3_view.pt:28 browser/templates/member_view.pt:28
 msgid "Email"
 msgstr "邮件地址"
 
-#: ./membrane_helpers.py:88
+#: membrane_helpers.py:88
 msgid "Email ${email} is already in use."
 msgstr "邮件地址${email} 已经被使用了。"
 
@@ -115,438 +120,455 @@ msgstr "邮件地址${email} 已经被使用了。"
 msgid "Enable this member"
 msgstr "批准这个会员"
 
-#: ./browser/templates/member_b3_view.pt:39
-#: ./browser/templates/member_view.pt:39
-#: ./content/member.py:142
+#: browser/templates/member_b3_view.pt:39 browser/templates/member_view.pt:39
+#: content/member.py:143
 msgid "External Homepage"
 msgstr "我的主页"
 
-#: ./content/member.py:319
+#: content/member.py:307
 msgid "Fill in this field with things you need the organizers to know.        If you are roomsharing and already have a roommate, please mention your roommate's name here"
 msgstr "将你需要主办方知道的信息填写在下面。如果你打算和他人共住客房并且已有了同住房客，请在此留下同住房客的姓名。"
 
-#: ./vocabulary.py:57
+#: browser/vocabulary.py:57
 msgid "Finance"
 msgstr "金融"
 
-#: ./content/member.py:131
+#: content/member.py:132
 msgid "First Name"
 msgstr "名"
 
-#: ./vocabulary.py:30
+#: browser/vocabulary.py:30
 msgid "Fujian"
 msgstr "福建"
 
-#: ./content/member.py:120
+#: content/member.py:121
 msgid "Full name"
 msgstr "姓名"
 
-#: ./vocabulary.py:42
+#: browser/vocabulary.py:42
 msgid "Gansu"
 msgstr "甘肃"
 
-#: ./browser/member_view.py:154
-#: ./browser/templates/member_b3_view.pt:128
+#: browser/member_view.py:155 browser/templates/member_b3_view.pt:128
 msgid "Geography information"
 msgstr "地理信息"
 
-#: ./vocabulary.py:56
+#: browser/vocabulary.py:56
 msgid "Government"
 msgstr "政府"
 
-#: ./content/member.py:180
-msgid "Government department"
-msgstr "政府部门"
-
-#: ./vocabulary.py:31
+#: browser/vocabulary.py:31
 msgid "Guangdong"
 msgstr "广东"
 
-#: ./vocabulary.py:32
+#: browser/vocabulary.py:32
 msgid "Guangxi"
 msgstr "广西"
 
-#: ./vocabulary.py:34
+#: browser/vocabulary.py:34
 msgid "Guizhou"
 msgstr "贵州"
 
-#: ./vocabulary.py:43
+#: browser/vocabulary.py:43
 msgid "Hainan"
 msgstr "海南"
 
-#: ./vocabulary.py:17
+#: browser/vocabulary.py:17
 msgid "Heber"
 msgstr "河北"
 
-#: ./vocabulary.py:18
+#: browser/vocabulary.py:18
 msgid "Henan"
 msgstr "河南"
 
-#: ./vocabulary.py:10
+#: browser/vocabulary.py:10
 msgid "Hubei"
 msgstr "湖北"
 
-#: ./vocabulary.py:9
+#: browser/vocabulary.py:9
 msgid "Hunan"
 msgstr "湖南"
 
-#: ./content/member.py:314
+#: content/member.py:302
 msgid "If you want or need a room, check this option"
 msgstr "如果你需要预定客房，请选择此选项"
 
-#: ./vocabulary.py:27
+#: browser/vocabulary.py:27
 msgid "Jiangsu"
 msgstr "江苏"
 
-#: ./vocabulary.py:40
+#: browser/vocabulary.py:40
 msgid "Jiangxi"
 msgstr "江西"
 
-#: ./vocabulary.py:13
+#: browser/vocabulary.py:13
 msgid "Jilin"
 msgstr "吉林"
 
-#: ./content/member.py:136
+#: content/member.py:137
 msgid "Last Name"
 msgstr "姓"
 
-#: ./profiles/example/types/dexterity.membrane.member.xml
-#: ./profiles/example/types/dexterity.membrane.organizationmember.xml
-#: ./profiles/example/types/dexterity.membrane.wechatmember.xml
+#: profiles/example/types/dexterity.membrane.member.xml
+#: profiles/example/types/dexterity.membrane.organizationmember.xml
+#: profiles/example/types/dexterity.membrane.wechatmember.xml
 msgid "Member"
 msgstr "成员"
 
-#: ./browser/templates/member_b3_listing.pt:21
-#: ./browser/templates/member_listing.pt:21
+#: browser/templates/member_b3_listing.pt:21
+#: browser/templates/member_listing.pt:21
 msgid "Member information"
 msgstr "会员信息"
 
-#: ./behavior/membranepassword.py:74
+#: behavior/membranepassword.py:74
 msgid "Membership"
 msgstr "从属"
 
-#: ./browser/templates/bonus_b3_recorders.pt:19
-#: ./browser/templates/bonus_recorders.pt:19
+#: behavior/configure.zcml:33
+msgid "Membrane Group"
+msgstr ""
+
+#: behavior/configure.zcml:16
+msgid "Membrane User"
+msgstr ""
+
+#: browser/templates/bonus_b3_recorders.pt:19
+#: browser/templates/bonus_recorders.pt:19
 msgid "My bonus recorders(current bonus is:${bonus})"
 msgstr "我的积分获取记录（当前积分是${bonus}）"
 
-#: ./browser/templates/member_b3_view.pt:166
-#: ./content/member.py:309
+#: behavior/configure.zcml:24
+msgid "Name from full name"
+msgstr ""
+
+#: browser/templates/member_b3_view.pt:166 content/member.py:297
 msgid "Need funding"
 msgstr "需要会务支持"
 
-#: ./vocabulary.py:19
+#: browser/vocabulary.py:19
 msgid "Neimenggu"
 msgstr "内蒙古"
 
-#: ./browser/member_view.py:132
-#: ./browser/templates/member_b3_view.pt:98
+#: browser/member_view.py:133 browser/templates/member_b3_view.pt:98
 msgid "Network information"
 msgstr "网络信息"
 
-#: ./vocabulary.py:41
+#: browser/vocabulary.py:41
 msgid "Ningxia"
 msgstr "宁夏"
 
-#: ./content/member.py:81
+#: content/member.py:81
 msgid "Not a valid link"
 msgstr "不是有效的url"
 
-#: ./content/member.py:42
+#: content/member.py:42
 msgid "Not an email address"
 msgstr "邮件地址无效"
 
-#: ./browser/templates/bonus_b3_recorders.pt:25
-#: ./browser/templates/bonus_recorders.pt:25
+#: browser/templates/bonus_b3_recorders.pt:25
+#: browser/templates/bonus_recorders.pt:25
 msgid "Number"
 msgstr "序号"
 
-#: ./browser/templates/member_b3_view.pt:73
-#: ./content/member.py:233
+#: browser/templates/member_b3_view.pt:73 content/member.py:230
 msgid "Organization / Company"
 msgstr "公司或单位"
 
-#: ./behavior/membranepassword.py:42
+#: behavior/configure.zcml:42 behavior/membranepassword.py:42
 msgid "Password"
 msgstr "密码"
 
-#: ./browser/templates/member_b3_view.pt:186
-#: ./content/member.py:337
+#: browser/templates/member_b3_view.pt:186 content/member.py:325
 msgid "Person Color Tag"
 msgstr "个性彩色标签"
 
-#: ./browser/templates/member_b3_view.pt:111
-#: ./content/member.py:223
+#: browser/templates/member_b3_view.pt:111 content/member.py:192
 msgid "Phone number"
 msgstr "电话号码"
 
-#: ./content/member.py:297
+#: content/member.py:155
 msgid "Photo"
 msgstr "相片"
 
-#: ./content/member.py:350
+#: content/member.py:338
 msgid "Please upload image smaller than 512KB"
 msgstr "请上载小于512KB的图片"
 
-#: ./browser/templates/member_b3_view.pt:78
-#: ./content/member.py:244
+#: browser/templates/member_b3_view.pt:78 content/member.py:241
 msgid "Position / Role in Organization"
 msgstr "职位"
 
-#: ./browser/templates/member_b3_view.pt:116
-#: ./content/member.py:291
+#: browser/templates/member_b3_view.pt:116 content/member.py:210
 msgid "QQ Number"
 msgstr "QQ号码"
 
-#: ./vocabulary.py:21
+#: browser/vocabulary.py:21
 msgid "Qinghai"
 msgstr "青海"
 
-#: ./browser/register.py:106
+#: browser/register.py:106
 msgid "Register for site member"
 msgstr "注册成为本站会员"
 
-#: ./browser/templates/member_b3_view.pt:171
-#: ./content/member.py:313
+#: browser/templates/member_b3_view.pt:171 content/member.py:301
 msgid "Roomshare"
 msgstr "共用客房"
 
-#: ./content/member.py:238
+#: content/member.py:200
 msgid "Sector"
 msgstr "行业"
 
-#: ./vocabulary.py:15
+#: browser/vocabulary.py:15
 msgid "Shandong"
 msgstr "山东"
 
-#: ./vocabulary.py:25
+#: browser/vocabulary.py:25
 msgid "Shanghai"
 msgstr "上海"
 
-#: ./vocabulary.py:16
+#: browser/vocabulary.py:16
 msgid "Shanxi"
 msgstr "山西"
 
-#: ./vocabulary.py:35
+#: browser/vocabulary.py:35
 msgid "Shenzhen"
 msgstr "深圳"
 
-#: ./content/member.py:125
+#: content/member.py:126
 msgid "Short Bio"
 msgstr "个人简介"
 
-#: ./vocabulary.py:29
+#: browser/vocabulary.py:29
 msgid "Sichuan"
 msgstr "四川"
 
-#: ./browser/templates/member_b3_view.pt:176
-#: ./content/member.py:329
+#: behavior/configure.zcml:42
+msgid "Store password on this content"
+msgstr ""
+
+#: browser/templates/member_b3_view.pt:176 content/member.py:317
 msgid "T-shirt size"
 msgstr "文化衫大小"
 
-#: ./vocabulary.py:38
+#: browser/vocabulary.py:38
 msgid "Taiwan"
 msgstr "台湾"
 
-#: ./content/member.py:126
+#: content/member.py:127
 msgid "Tell us more about yourself"
 msgstr "告诉我们关于你自己的情况"
 
-#: ./behavior/membranepassword.py:60
+#: behavior/membranepassword.py:60
 msgid "The password and confirmation do not match."
 msgstr "口令字段和确认字段不匹配。"
 
-#: ./vocabulary.py:24
+#: browser/vocabulary.py:24
 msgid "Tianjin"
 msgstr "天津"
 
-#: ./browser/member_view.py:121
+#: browser/member_view.py:122
 msgid "Update password"
 msgstr "更新密码"
 
-#: ./browser/templates/member_b3_view.pt:181
-#: ./content/member.py:324
+#: behavior/configure.zcml:24
+msgid "Use the full name as name (basis for the id)"
+msgstr ""
+
+#: behavior/configure.zcml:33
+msgid "Use this content as a membrane group"
+msgstr ""
+
+#: behavior/configure.zcml:16
+msgid "Use this content as a membrane user"
+msgstr ""
+
+#: browser/templates/member_b3_view.pt:181 content/member.py:312
 msgid "Vegetarian?"
 msgstr "素食吗？"
 
-#: ./content/member.py:262
+#: content/member.py:254
 msgid "Where you are from"
 msgstr "来自哪里"
 
-#: ./browser/member_view.py:143
-#: ./browser/templates/member_b3_view.pt:65
+#: browser/member_view.py:144 browser/templates/member_b3_view.pt:65
 msgid "Work information"
 msgstr "工作信息"
 
-#: ./vocabulary.py:36
+#: browser/vocabulary.py:36
 msgid "Xianggang"
 msgstr "香港"
 
-#: ./vocabulary.py:20
+#: browser/vocabulary.py:20
 msgid "Xinqiang"
 msgstr "新疆"
 
-#: ./vocabulary.py:22
+#: browser/vocabulary.py:22
 msgid "Xizang"
 msgstr "西藏"
 
-#: ./content/member.py:298
+#: content/member.py:156
 msgid "Your photo or avatar. Recommended size is 150x195"
 msgstr "你的相片，建议尺寸为150x195px"
 
-#: ./vocabulary.py:28
+#: browser/vocabulary.py:28
 msgid "Zhejiang"
 msgstr "浙江"
 
-#: ./browser/templates/member_b3_view.pt:32
-#: ./browser/templates/member_view.pt:32
-#: ./content/member.py:282
+#: browser/templates/member_b3_view.pt:32 browser/templates/member_view.pt:32
+#: content/member.py:274
 msgid "bonus"
 msgstr "积分"
 
-#: ./browser/templates/member_b3_view.pt:34
-#: ./browser/templates/member_view.pt:34
+#: browser/templates/member_b3_view.pt:34 browser/templates/member_view.pt:34
 msgid "bonus recorders"
 msgstr "积分记录"
 
-#: ./browser/templates/member_b3_view.pt:52
-#: ./browser/templates/member_view.pt:52
+#: browser/templates/member_b3_view.pt:52 browser/templates/member_view.pt:52
 msgid "change password"
 msgstr "更改口令"
 
-#: ./browser/templates/member_b3_view.pt:54
+#: browser/templates/member_b3_view.pt:54
 msgid "change wechat"
 msgstr "更改微信设置"
 
-#: ./browser/member_view.py:166
+#: browser/member_view.py:167
 msgid "conference information"
 msgstr "会务信息"
 
-#: ./vocabulary.py:59
+#: browser/vocabulary.py:59
 msgid "consult"
 msgstr "咨询"
 
 #. Default: "Your account has been created,we have sent instructions for setting a password to this email address: ${address}"
-#: ./patch/membership.py:72
+#: patch/membership.py:72
 msgid "create_membrane_account_succesful"
 msgstr "会员账号已成功创建"
 
-#: ./browser/templates/bonus_b3_recorders.pt:26
-#: ./browser/templates/bonus_recorders.pt:26
+#: browser/templates/bonus_b3_recorders.pt:26
+#: browser/templates/bonus_recorders.pt:26
 msgid "description"
 msgstr "描述"
 
-#: ./browser/templates/member_b3_listing.pt:29
-#: ./browser/templates/member_listing.pt:29
+#: configure.zcml:24
+msgid "dexterity.membrane: behaviors"
+msgstr ""
+
+#: content/configure.zcml:16
+msgid "dexterity.membrane: content"
+msgstr ""
+
+#: browser/templates/member_b3_listing.pt:29
+#: browser/templates/member_listing.pt:29
 msgid "email"
 msgstr "邮件地址"
 
-#: ./vocabulary.py:58
+#: content/member.py:95
+msgid "email address using as activated account,must be valid"
+msgstr "邮件地址用来激活账号,必须是有效的邮件地址"
+
+#: browser/vocabulary.py:58
 msgid "energy"
 msgstr "能源"
 
-#: ./vocabulary.py:62
+#: browser/vocabulary.py:62
 msgid "enterprise"
 msgstr "企业"
 
-#: ./vocabulary.py:12
+#: browser/vocabulary.py:12
 msgid "heilongjiang"
 msgstr "黑龙江"
 
-#: ./vocabulary.py:14
+#: browser/vocabulary.py:14
 msgid "liaolin"
 msgstr "辽林"
 
-#: ./vocabulary.py:60
+#: browser/vocabulary.py:60
 msgid "manufacture"
 msgstr "工厂"
 
-#: ./profiles/example/types/dexterity.membrane.memberfolder.xml
+#: profiles/example/types/dexterity.membrane.memberfolder.xml
 msgid "memberfolder"
 msgstr "会员文件夹"
 
-#: ./profiles/example/types/dexterity.membrane.memberfolder.xml
+#: profiles/example/types/dexterity.membrane.memberfolder.xml
 msgid "memberfolder for site member"
 msgstr "会员文件夹"
 
-#: ./browser/templates/member_b3_listing.pt:27
-#: ./browser/templates/member_listing.pt:27
+#: browser/templates/member_b3_listing.pt:27
+#: browser/templates/member_listing.pt:27
 msgid "name"
 msgstr "姓名"
 
-#: ./browser/templates/member_b3_listing.pt:32
-#: ./browser/templates/member_listing.pt:32
+#: browser/templates/member_b3_listing.pt:32
+#: browser/templates/member_listing.pt:32
 msgid "operations"
 msgstr "操作"
 
-#: ./content/member.py:159
-msgid "organization name"
-msgstr "社会组织名称"
+#: content/member.py:196
+msgid "organization"
+msgstr "申报企业"
 
-#: ./content/member.py:275
+#: content/member.py:205
 msgid "personal address"
 msgstr "个人联系地址"
 
-#: ./browser/register.py:71
+#: browser/register.py:71
 msgid "privacy"
 msgstr "会员注册协议"
 
-#: ./browser/templates/member_b3_listing.pt:30
-#: ./browser/templates/member_listing.pt:30
+#: browser/templates/member_b3_listing.pt:30
+#: browser/templates/member_listing.pt:30
 msgid "register date"
 msgstr "注册日期"
 
-#: ./browser/templates/member_b3_view.pt:87
-#: ./content/member.py:250
+#: browser/templates/member_b3_view.pt:87 content/member.py:247
 msgid "research domain"
 msgstr "研究领域"
 
-#: ./browser/templates/member_b3_listing.pt:28
-#: ./browser/templates/member_listing.pt:28
+#: browser/templates/member_b3_listing.pt:28
+#: browser/templates/member_listing.pt:28
 msgid "roles"
 msgstr "角色"
 
-#: ./browser/templates/member_b3_listing.pt:31
-#: ./browser/templates/member_listing.pt:31
+#: browser/templates/member_b3_listing.pt:31
+#: browser/templates/member_listing.pt:31
 msgid "status"
 msgstr "状态"
 
 #. Default: "Failed to create your account: we were unable to send instructions for setting a password to your email address: ${address}"
-#: ./patch/membership.py:94
+#: patch/membership.py:94
 msgid "status_fatal_password_mail"
-msgstr ""
+msgstr "创建账户失败：我们无法发送设置密码的说明到您的 Email 地址：${address}"
 
 #. Default: "This account has been created, but we were unable to send instructions for setting a password to this email address: ${address}"
-#: ./patch/membership.py:106
+#: patch/membership.py:106
 msgid "status_nonfatal_password_mail"
-msgstr ""
+msgstr "此帐户已创建，但我们无法发送设置密码的说明到此 Email 地址：${address}"
 
-#: ./vocabulary.py:61
+#: browser/vocabulary.py:61
 msgid "telecommunication"
 msgstr "电信"
 
-#: ./browser/templates/member_b3_view.pt:141
-#: ./content/member.py:269
+#: browser/templates/member_b3_view.pt:141 content/member.py:261
 msgid "the province of your company"
 msgstr "公司所在省份"
 
-#: ./content/member.py:283
+#: content/member.py:275
 msgid "user's bonus,user permission was controlled by this"
 msgstr "注意：会员的权限取决与其积分！"
 
-#: ./browser/templates/member_b3_view.pt:56
+#: browser/templates/member_b3_view.pt:56
 msgid "wechat menu"
 msgstr "微信菜单"
 
-#: ./browser/templates/member_b3_view.pt:58
+#: browser/templates/member_b3_view.pt:58
 msgid "wechat setting"
 msgstr "微信设置"
 
-#: ./browser/templates/member_b3_view.pt:82
+#: browser/templates/member_b3_view.pt:82
 msgid "your job belong to sector"
 msgstr "行业"
 
-#: ./vocabulary.py:33
+#: browser/vocabulary.py:33
 msgid "yunnan"
 msgstr "云南"
-
